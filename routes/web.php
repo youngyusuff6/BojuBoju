@@ -18,9 +18,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Auth::routes(['verify' => true]);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/dashboard',[MessagesController::class, 'dashboard']);
 
 Auth::routes();
 Route::resource('messages', 'App\Http\Controllers\MessagesController');
+Route::get('/{username}',[App\Http\Controllers\MessagesController::class, 'display']);
