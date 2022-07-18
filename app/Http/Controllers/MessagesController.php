@@ -14,8 +14,9 @@ class MessagesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('messages.dashboard');
+    { 
+        $username = auth()->user()->username;
+        return view('messages.dashboard')->with('username', $username);
     }
 
     /**
