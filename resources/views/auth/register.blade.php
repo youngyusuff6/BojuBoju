@@ -101,7 +101,7 @@
           <ul>
         <li style="margin-top:50px;">
         why they should regiter </li>
-            <li>what we do </li>
+            <li>what we do on our website</li>
             <li>etc </li>
  </ul>
             </div>
