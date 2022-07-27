@@ -6,6 +6,16 @@
         <div> <a href="https://api.whatsapp.com/send?text=Hello, I am {{$username}}, Send me an anonynous message on https://bojuboju.com/{{$username}}" class="btn btn-success my-3">Share To Whatsapp</a></div>
         <div><a href="https://www.facebook.com/sharer/?u=/{{$username}}" class="btn btn-primary my-3">Share To Facebook</a></div>
         <div><a href="#" class="btn btn-info my-3">Profile Settings</a></div>
-        <div><a href="#" class="btn btn-danger my-3">Logout</a></div> 
+        <div>
+                <a 
+                    href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); 
+                    document.getElementById('logout-form').submit();" class="btn btn-danger my-3">
+                    Logout
+                </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>  
+        </div> 
     </div>
 @endsection
