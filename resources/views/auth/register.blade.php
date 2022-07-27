@@ -100,9 +100,9 @@
             <div class="side-card">
           <ul>
         <li style="margin-top:50px;">
-        Basit Bailey Likes plantain and egg </li>
-            <li>his best subject is math </li>
-            <li>He Loves to play basket ball </li>
+        why they should regiter </li>
+            <li>what we do </li>
+            <li>etc </li>
  </ul>
             </div>
         <!-- hover tranition effect
