@@ -10278,6 +10278,16 @@ textarea.form-control-lg {
 
 
                         /* REGISTER PAGE STYLING */
+
+
+
+/* regitration  page body styling */
+.registration-page-body{
+background-color:#fec1fe;
+}
+
+
+
 /* register */
 .register-form{
     border-color: transparent;
@@ -10314,6 +10324,7 @@ textarea.form-control-lg {
     font-size:17px;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
+
 }
 
 
@@ -10326,14 +10337,19 @@ background-color: #b298dc;}
 
 /* input background color when entering values */
 .form-control:active{
-    background-color: white;
+    background-color: silver;
+    border-style: solid;
+    border-color: #b298dc;
+    border-width: 3px 3px 3px 3px;
   }
 
 /* input background color on hover */
 
     .form-control:hover{
         background-color:transparent;
-
+        border-style: solid;
+        border-color: #b298dc;
+        border-width: 3px 3px 3px 3px;
         }
 
 /* header underline transition */
@@ -10344,7 +10360,7 @@ background-color: #b298dc;}
     height:4px;
     border-radius:5px;
     background:transparent;
-    top: 32%;
+    top: 13%;
     width: 0px;
     position: absolute;
     padding-left: 10px;
@@ -10359,41 +10375,43 @@ background-color: #b298dc;}
 
 
   /* hover event for header underline transition */
-  .register-form:hover ~ #formtransition {
+  .register-button:hover ~ #formtransition {
    background-color: #b298dc;
    height: 5px;
    width: 500px;
    opacity: 1;
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 2s ease-in-out;
-   transition: all 2s ease-in-out;
+  -webkit-transition: all 1.6s ease-in-out;
+  -moz-transition: all 1.6s ease-in-out;
+   transition: all 1.6s ease-in-out;
 
   }
 
 
 
 /* spinner beside register button */
-.spinner-border-sm{border-color: transparent ;}
+.spinner-border-sm{display: none;}
 
 
 
 /* register button */
   .register-button{
   background-color: #b298dc;
+  font-weight:800;
   }
 
 
    /* register button on hover */
    .register-button:hover {
      background-color:white ;
+     color:  #b298dc;
+
     }
 
   /* preloader display on register button  hover */
   .register-button:hover ~ #button-loader{
     border-color: orange;
-    display: contents;
+    display: flex;
     }
-
 
     /* side card information */
   .side-card{
@@ -10420,13 +10438,13 @@ background-color: #b298dc;}
     margin-top: 31px;
     margin-left: 1px;
     font-size: 17px;
-    color: purple;
+    color:  #b298dc;
     display: none;
     transition: ease-in 4s;
     overflow: hidden;
     text-overflow: ellipsis;
     position: static;
-    animation: 8s anim-lineUp ease-out;
+    animation: 7s anim-lineUp ease-out;
   }
 
 
@@ -10434,7 +10452,7 @@ background-color: #b298dc;}
   .register-form:hover ~ .side-card {
   transition: ease-in 2s;
   width: 320px;
-   background-color: skyblue;
+   background-color: white;
   }
 
 
@@ -10464,7 +10482,21 @@ background-color: #b298dc;}
   }
 
 
-  /* left card responsiveness */
+  @media (max-width: 920px) and (min-width:720px) {
+    .register-form{
+        width:600px;
+        height: 1px;
+    }
+
+    .registration-footer{
+        position: absolute;
+        bottom:20%;
+        right: -4%;
+    }
+  }
+
+
+  /*  responsiveness for width 920 below*/
 
   @media only screen and (max-width: 920px) {
 
@@ -10506,7 +10538,7 @@ background-color: #b298dc;}
   .register-form:hover ~ .side-card {
   transition: ease-in 2s;
   width: 240px;
-   background-color: orange;
+   background-color: white;
   }
 
 
@@ -10517,9 +10549,17 @@ background-color: #b298dc;}
   }
 
 
+  /* registration-footer for small width devices */
+  .registration-footer{
+    position: absolute;
+    bottom:0%;
+    right: -4%;
+  }
 
-
-
+/* register form height for mall width device */
+  .register-form{
+    height: 660px;
+}
   }
 
 
