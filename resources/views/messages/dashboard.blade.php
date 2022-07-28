@@ -5,7 +5,7 @@
         <div> <a href="#" class="btn btn-warning my-3">Share Profile</a></div>
         <div> <a href="https://api.whatsapp.com/send?text=Hello, I am {{$username}}, Send me an anonynous message on https://bojuboju.com/{{$username}}" class="btn btn-success my-3">Share To Whatsapp</a></div>
         <div><a href="https://www.facebook.com/sharer/?u=/{{$username}}" class="btn btn-primary my-3">Share To Facebook</a></div>
-        <div><a href="#" class="btn btn-info my-3">Profile Settings</a></div>
+        <div><a href="/settings" class="btn btn-info my-3">Profile Settings</a></div>
         <div>
                 <a 
                     href="{{ route('logout') }}"
@@ -17,5 +17,14 @@
                         @csrf
                     </form>  
         </div> 
+
+
+            {{-- MODALLLLL --}}
+            
+       
+
+            {{-- MODALLLLL --}}
+
+
     </div>
 @endsection

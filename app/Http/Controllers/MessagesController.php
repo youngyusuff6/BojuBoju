@@ -62,6 +62,10 @@ class MessagesController extends Controller
                 return view('messages.create')->with('username', $username);        
     }
 
+    public function getSettings(){
+        return view('settings.settings');
+    }
+
 
 
 
