@@ -1,5 +1,12 @@
 @extends('layouts.app')
 @section('title') Login @endsection
+
+{{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
+@section('styles')
+    <link rel="stylesheet" href="{{url('vendor/css/style.css')}}">
+@endsection
+
+{{-- MAIN CONTENTS --}}
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -70,4 +77,9 @@
         </div>
     </div>
 </div>
+@endsection
+
+{{-- ADD JS HERE OR IMPORT --}}
+@section('scripts')
+
 @endsection
