@@ -16,7 +16,7 @@
           <p>
               @if ($message->image)
               <div class="card">
-               <a href="{{asset('storage/'.$message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset('storage/'.$message->image)}}" alt="message_img" style="width:100%">git </a> 
+               <a href="{{asset('storage/'.$message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset('storage/'.$message->image)}}" alt="message_img" style="width:100%"></a> 
                 <div class="card-body">
                 </div>
             </div>
