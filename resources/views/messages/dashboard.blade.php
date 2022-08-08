@@ -1,5 +1,14 @@
 @extends('layouts.app')
+@section('title') Dashboard @endsection
 @section('content')
+<div class="card">
+    <div class="card-header">
+        <h1 class="lead">Good {{$timeOfTheDay}}, <span class="text-warning">{{$name}}</span></h1>
+    </div>
+    <div class="card-body">  
+        <p>You're logged in!</p>
+    </div>
+</div>
     <div class="container text-center border rounded border-success bg-dark">
         <div><a href="/messages/MyMessages" class="btn btn-secondary my-3">Messages</a></div>
         <div> <a href="#" class="btn btn-warning my-3">Share Profile</a></div>
@@ -17,7 +26,6 @@
                         @csrf
                     </form>  
         </div> 
-
 
             {{-- MODALLLLL --}}
             

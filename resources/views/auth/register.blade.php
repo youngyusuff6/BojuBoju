@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title') Register @endsection
 @section('content')
 
 <body style="background-color:#fec1fe;">

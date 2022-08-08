@@ -7,8 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'BojuBoju | Anonymous Messages') }} BojuBoju</title>
-
+    <title> {{ Config::get('app.name') }} | @yield('title') </title>
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer> </script>
     <script>
@@ -29,7 +29,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('../../../../css/login.css') }}" rel="stylesheet">
-
+    @yield('styles')
 
     <!-- web icon -->
     <link rel = "icon" href ="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtHDYkP6gvC3kafpfS_v68YOz0cp-P3sqZlpFyB1ya7sF-x1t8eORa64x1KcWBaBNne16O5SHgM_LyjG5Vb396Bz3QfO6ElbgpA4fwaVIXytxBIqC5Wp7iQodrqH9pyUVDVpd1bR09VDyt4ronc4luisoapQuf0Fx4TXz7ax8vYb1B59Z3FnEhk0gVsw/s1600/output-onlinepngtools-_4_.ico"  type = "image/x-icon" height="50px" width="80px">
@@ -79,14 +79,15 @@
                                 </li>
                             @endif
                         @else
-                            <li class="d-flex nav-item dropdown" style="left:80% ;">
+                            <li class="d-flex nav-item dropdown" style="left: ;">
 
                            <a id="navbarDropdown"  class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <!-- user  image -->
-                           <img alt="Qries"  src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" height="40">
+                                <img alt="Qries"  src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" height="40">
                                 {{ Auth::user()->name }}   </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a href="/messages" class="dropdown-item">Dashboard</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -110,7 +111,8 @@
     </div>
     <footer class='mt-5'>
         <hr>
-        <p class="text-center">© 2022 BojuBoju | Anonymous Messages. <br> All Rights Reserved.</p>
+        <p class="text-center">© @php echo date('Y')@endphp BojuBoju | Anonymous Messages. <br> All Rights Reserved.</p>
     </footer>
+    @yield('scripts')
 </body>
 </html>
