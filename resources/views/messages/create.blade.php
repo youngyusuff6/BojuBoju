@@ -1,6 +1,19 @@
 @extends('layouts.app')
 @section('title') Write a Message @endsection
 @section('styles')
+<style>
+    textarea{
+        width: 100%;
+        height: 100%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #cccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+    }
+</style>
 @endsection
 @section('scripts')
 @endsection
@@ -18,18 +31,33 @@
             <form action='/messages' method="post" enctype="multipart/form-data">
                 @csrf
 
-                <div class="form-group">
-                    <input type="hidden" name="username" value="{{$username['username']}}">
-                    <textarea name="message" class="form-control" placeholder="Send your text here" min="10" maxlength="400" id="" cols="20" rows="10" required></textarea>
+                <input 
+                type="hidden"
+                name="username" 
+                value="{{$username['username']}}">
+                <div class="form-group mb-2">
+                    
+                    <textarea 
+                    name='message' 
+                    class="form-control" 
+                    placeholder="Send your text here"
+                    rows="10">
+                    {{@old('message')}}
+                    </textarea>
                     @error('message')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
+                    <span class="text-danger">
+                        <small>{{ $message }}</small>
                     </span>
                     @enderror
                 </div>
 
-                <div class="form-group mt-1">
+                <div class="form-group mt-2">
                     <input type="file" name="image">
+                    @error('image')
+                    <p class="text-danger">
+                        <small>{{ $message }}</small>
+                    </p>
+                    @enderror
                 </div>
 
                 <div>

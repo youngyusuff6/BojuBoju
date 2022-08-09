@@ -54,28 +54,32 @@ class MessagesController extends Controller
         $message = new Message();
 
         $this->validate($request,[
-            'message' => 'required|min:10',
+            'message' => 'required|min:5|max:270',
             'image' => 'image|nullable|max:1999'
         ]);
-        // if($request->hasFile('image')){
-        //     //Get filename with extension
-        //     $fileNameWithExt = $request->file('image')->getClientOriginalName();
-        //     //get only filename
-        //     $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-        //     //get only extension
-        //     $extension = $request->file('image')->getClientOriginalExtension();
-        //     //filename to store
-        //     $fileNameToStore = $fileName."_".time()."_".$extension;
-        //     //upload image
-        //     $path = $request->file('image')->storeAs('public/images',$fileNameToStore);
-        // }else{
-        //     $fileNameToStore = NULL;
-        // }
 
         if($request->hasFile('image')){
             $path = $request->file('image')->store('images','public');
-            }
+        }else{
+            $path = NULL;
+        }
 
+
+            // FUNCTION TO HELP US FETCH THE IP ADDRESS OF THE WEBSITE VISITORS
+        function getUserIpAddr(){
+            if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+                //ip from share internet
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+                //ip pass from proxy
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            }else{
+                $ip = $_SERVER['REMOTE_ADDR'];
+            }
+            return $ip;
+        }
+
+        $message->ip_address = getUserIpAddr();
         $message->image = $path;
         $message->message = $request->input('message');
         $message->user_id = $request->input('username');
