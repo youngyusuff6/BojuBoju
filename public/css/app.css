@@ -10277,6 +10277,7 @@ textarea.form-control-lg {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -10291,6 +10292,24 @@ body{
 
    .navbar{
     height:80px;
+=======
+                        /* REGISTER PAGE STYLING */
+
+
+
+/* regitration  page body styling */
+.registration-page-body{
+background-color:#fec1fe;
+}
+
+
+
+/* register */
+.register-form{
+    border-color: transparent;
+    background-color: transparent;
+    position: relative;
+>>>>>>> 213d342fcf4daff7afb0b3a5dbee6af1e705256a
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
 
    }
@@ -10301,18 +10320,50 @@ body{
    }
 
 
+<<<<<<< HEAD
    .nav-item{
     font-family: 'PT Sans', sans-serif;
     font-weight:900;
     font-size:18px;
     color:gray;
    }
+=======
+/* register  form header style */
+.register-form-header{
+     border-style: solid;
+    border-color: transparent;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    border-left:transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+    border-top: transparent;
+}
+
+/* register-body */
+.form-body{
+    border-style: solid;
+    border-left:transparent;
+    border-right: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+}
+
+.register-label{
+    font-size:17px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+
+}
+>>>>>>> 213d342fcf4daff7afb0b3a5dbee6af1e705256a
 
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -10340,11 +10391,239 @@ body{
    }
 
 
+=======
+/* input background color when entering values */
+.form-control:active{
+    background-color: silver;
+    border-style: solid;
+    border-color: #b298dc;
+    border-width: 3px 3px 3px 3px;
+  }
+
+/* input background color on hover */
+
+    .form-control:hover{
+        background-color:transparent;
+        border-style: solid;
+        border-color: #b298dc;
+        border-width: 3px 3px 3px 3px;
+        }
+
+/* header underline transition */
+
+.registration-transition {
+    position: absolute;
+    width: 600px;
+    height:4px;
+    border-radius:5px;
+    background:transparent;
+    top: 13%;
+    width: 0px;
+    position: absolute;
+    padding-left: 10px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+    left: 50%; /*Add this*/
+    transform: translate(-50%, 0); /*Add this*/
+  }
+
+
+  /* hover event for header underline transition */
+  .register-button:hover ~ #formtransition {
+   background-color: #b298dc;
+   height: 5px;
+   width: 500px;
+   opacity: 1;
+  -webkit-transition: all 1.6s ease-in-out;
+  -moz-transition: all 1.6s ease-in-out;
+   transition: all 1.6s ease-in-out;
+
+  }
 
 
 
+/* spinner beside register button */
+.spinner-border-sm{display: none;}
 
 
+
+/* register button */
+  .register-button{
+  background-color: #b298dc;
+  font-weight:800;
+  }
+
+
+   /* register button on hover */
+   .register-button:hover {
+     background-color:white ;
+     color:  #b298dc;
+
+    }
+
+  /* preloader display on register button  hover */
+  .register-button:hover ~ #button-loader{
+    border-color: orange;
+    display: flex;
+    }
+
+    /* side card information */
+  .side-card{
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent;
+    width:0px;
+    height: 300px;
+    transition: ease-out 3.2s;
+    border-bottom-right-radius: 120px;
+    border-top-right-radius: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+
+
+   /* texts in the  SIDE cArd */
+.side-card li{
+    text-decoration:none;
+    font-weight: bolder;
+    margin-top: 31px;
+    margin-left: 1px;
+    font-size: 17px;
+    color:  #b298dc;
+    display: none;
+    transition: ease-in 4s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: static;
+    animation: 7s anim-lineUp ease-out;
+  }
+
+
+  /* side card hover event */
+  .register-form:hover ~ .side-card {
+  transition: ease-in 2s;
+  width: 320px;
+   background-color: white;
+  }
+
+
+  /* side card list hover event */
+  .register-form:hover ~ .side-card li {
+   display: inline-flex;
+   animation: 9s anim-lineUp ease-out;
+  }
+
+  /* delays  text time in  so it wont jam up */
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+
+  @media (max-width: 920px) and (min-width:720px) {
+    .register-form{
+        width:600px;
+        height: 1px;
+    }
+
+    .registration-footer{
+        position: absolute;
+        bottom:20%;
+        right: -4%;
+    }
+  }
+
+
+  /*  responsiveness for width 920 below*/
+
+  @media only screen and (max-width: 920px) {
+
+
+    /* side card information */
+  .side-card{
+    position: absolute;
+    top: 8%;
+    left: 0%;
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent;
+    width:0px;
+    height: 220px;
+    transition: ease-out 3.2s;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+
+   /* texts in the  SIDE cArd */
+   .side-card li{
+    text-decoration:none;
+    font-weight: bolder;
+    margin-top: 21px;
+    margin-right: 15px;
+    font-size: 12px;
+    color: purple;
+    display: none;
+    transition: ease-in 4s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: static;
+  }
+
+
+  /* side card hover event */
+  .register-form:hover ~ .side-card {
+  transition: ease-in 2s;
+  width: 240px;
+   background-color: white;
+  }
+
+
+  /* side card list hover event */
+  .register-form:hover ~ .side-card li {
+   display: inline-flex;
+   animation: 6s anim-lineUp ease-out;
+  }
+>>>>>>> 213d342fcf4daff7afb0b3a5dbee6af1e705256a
+
+
+  /* registration-footer for small width devices */
+  .registration-footer{
+    position: absolute;
+    bottom:0%;
+    right: -4%;
+  }
+
+<<<<<<< HEAD
+
+
+=======
+/* register form height for mall width device */
+  .register-form{
+    height: 660px;
+}
+  }
+>>>>>>> 213d342fcf4daff7afb0b3a5dbee6af1e705256a
 
 
 
