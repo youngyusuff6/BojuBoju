@@ -18,6 +18,7 @@ class CreateMessagesTable extends Migration
             $table->string('user_id')->constrained();
             $table->string('message');
             $table->string('image')->nullable();
+            $table->string('ip_address')->nullable();
             $table->timestamps();
         });
     }

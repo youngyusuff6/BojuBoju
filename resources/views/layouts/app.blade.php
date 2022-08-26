@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'BojuBoju | Anonymous Messages') }} BojuBoju</title>
+    <title> {{ Config::get('app.name') }} | @yield('title') </title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer> </script>
@@ -21,7 +21,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('../../../../css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/css/app.css')}}" rel="stylesheet">
+    @yield('styles')
 
 
     <!-- web icon -->
@@ -31,18 +32,19 @@
     <script src="https://kit.fontawesome.com/f335250b9c.js" crossorigin="anonymous"></script>
     <!-- Icon -->
     <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-protection-mask-16.png">
-    @stack('styles')</head>
+</head>
 
 
-<body style="background-color:#fec1fe ;">
+
+<body>
 
     <div id="app">
 
-        <nav class="navbar navbar-expand-md navbar-light bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-md" style="height:80px;  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <!-- brand-logo -->
-                <img class="brand-logo" alt="Qries"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiitGpdYaJM8-zYzcxGYoN6xoYdYyN4H6M4YQmcJQI1-oyinFCHPfGEzcJMFJScwnoA5_qJGXszvFhOc7-CeuCiPBBjwG2iCe_FxbMoSGIc-VAG3dGtV69Fzkn2ClCOV5r80_3-zb7QPfw2qrY3g3Yx49Z8LDuAlp6aq34kuD7pk80qhnDJG5MWqJQ8Cg/s320/BOJU%20BOJU%20(5).png" height="80" width="100">
+                <img class="brandlogo" alt="Qries"  src="{{ asset('vendor/images/brandlogo.png')}}" height="80" width="100">
                      <!-- {{ config('app.name', 'BojuBoju | Anonymous Messages') }} -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -61,46 +63,36 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link "   href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link "  href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                             @endif
 
                             @if (Route::has('register'))
-                                <li class="nav-item"  >
-                                    <a class="nav-link"    href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <li class="nav-item">
+                                    <a class="nav-link"   href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
+                            <li class="d-flex nav-item dropdown" >
 
+                           <a id="navbarDropdown"  class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <!-- user  image -->
+                                <img alt="Qries"  src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" height="40">
+                                {{ Auth::user()->name }}   </a>
 
-                            <ul class="d-flex nav-item dropdown" style="left:0%; font-family: 'PT Sans', sans-serif;">
-
-                          <div class="profile-dropdown">
-                                    <!-- user  image -->
-                           <img alt="Qries"  src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" height="40">
-                               <h5>{{ Auth::user()->name }}</h5>
-                            </div>
-                            <a id="navbarDropdown"  class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            </a>
-
-                                <div class="dropdown-menu bg-transparent border-0 dropdown-menu-end"   aria-labelledby="navbarDropdown">
-
-
-                               <li> <a  class="dropdown-item bg-transparent fw-3 fs-4"  href="/settings" >
-                                    Profile Settings
-                                </a></li>
-
-                              <li>      <a class="dropdown-item bg-transparent fw-3 fs-4" href="{{ route('logout') }}"
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a href="/messages" class="dropdown-item">Dashboard</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a></li>
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
-                            </ul>
+                            </li>
                         @endguest
                     </ul>
                 </div>
@@ -113,7 +105,8 @@
     </div>
     <footer class='mt-5'>
         <hr>
-        <p class="text-center">© 2022 BojuBoju | Anonymous Messages. <br> All Rights Reserved.</p>
+        <p class="text-center">© @php echo date('Y')@endphp BojuBoju | Anonymous Messages. <br> All Rights Reserved.</p>
     </footer>
+    @yield('scripts')
 </body>
 </html>

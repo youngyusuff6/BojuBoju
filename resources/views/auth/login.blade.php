@@ -1,12 +1,15 @@
 @extends('layouts.app')
+@section('title') Login @endsection
 
+
+
+{{-- MAIN CONTENTS --}}
+
+{{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
+@section('styles')
+    <link rel="stylesheet" href="{{url('vendor/css/login.css')}}">
+@endsection
 @section('content')
-
-
-@push('styles')
- <link rel="stylesheet" href="{{ asset('../../../../css/login.css') }}">
-@endpush
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -72,8 +75,8 @@
                         </div>
                         </form>
 
-                </div>  <video class="eye" controls>
-                            <source src="../../../../../../Users/Priest/Documents/web-dev/PROJECTs/duo project/build.mp4" type="video/mp4">
+                </div>  <video class="eye" autoplay loop muted>
+                            <source  src="{{ asset('vendor/images/eye.gif')}}" type="video/mp4">
                         </video>
                  <!-- register-button hover tranition effect -->
                  <div class="login-header-transition" id="formtransition">
@@ -83,4 +86,9 @@
         </div>
     </div>
 </div>
+@endsection
+
+{{-- ADD JS HERE OR IMPORT --}}
+@section('scripts')
+
 @endsection

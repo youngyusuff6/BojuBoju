@@ -1,12 +1,15 @@
 @extends('layouts.app')
+@section('title') Register @endsection
+
+
+{{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
+@section('styles')
+    <link rel="stylesheet" href="{{url('vendor/css/register.css')}}">
+@endsection
 
 @section('content')
-<!--
-@push('styles')
- <link rel="stylesheet" href="{{ asset('../../../../css/register.css') }}">
-@endpush -->
 
-<body class="registration-page-body">
+<body>
 
 
 <div class="container" id="form">
@@ -16,7 +19,7 @@
 
                 <div class="card-header  register-form-header bg-transparent">{{ __('Sign Up Now') }}</div>
 
-                <div class="card-body border-0 form-body" id="form" >
+                <div class="card-body form-body" id="form" >
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -87,31 +90,31 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn register-button">
-                                     <span class="spinner-border spinner-border-sm" id="button-loader" role="status" aria-hidden="true"></span>
-                                {{ __('Register') }}
-                               </button>
-                                <!-- register-button hover tranition effect -->
-                                 <div class="registration-transition" id="formtransition">
-                                 </div>
+                                    {{ __('Register') }}
+                              <span class="spinner-border spinner-border-sm" id="button-loader" role="status" aria-hidden="true"></span>
+                              </button>
                             </div>
-                       <div class="d-flex mt-4 registration-footer">
-                            <li > <p>if you have an Account already</p>
-
-                         <a class="nav-link" href="{{ route('login') }}">  {{ __('Click here') }}</a>
+                       <div class="d-flex mt-3" style="margin-left: 105px;">
+                            <p style="margin-top:32px ;">if you have an Account already</p>
+                            <li class=" ">
+                         <a class="nav-link mb-2 me-2" style="font-family: 'PT Sans', sans-serif;" href="{{ route('login') }}">  {{ __('Click here') }}</a>
                                 </li></div>
                         </div>
                     </form>
                 </div>
         </div>
-                                    <!-- side-card transition effect -->
-                                        <div class="side-card">
-                                    <ul >
-                                    <li> Asusred Anonymity</li>
-                                        <li>Seamles User Experience</li>
-                                        <li>And More </li>
-                                    </ul>
+           <!-- side-card transition effect -->
+            <div class="side-card">
+          <ul>
+        <li style="margin-top:50px;">
+        why they should regiter </li>
+            <li>what we do on our website</li>
+            <li>etc </li>
+ </ul>
             </div>
-
+        <!-- hover tranition effect
+ <div class="registration-transition" id="formtransition">
+               </div> -->
     </div>
 </div>
 

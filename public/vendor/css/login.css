@@ -1,0 +1,192 @@
+                  /*login PAGE STYLING */
+
+
+
+/*  page body styling*/
+
+.login-header-transition{
+
+    position: absolute;
+      text-align:center;
+       width: 100%;
+       height:20px;
+       top: 20%;
+       left: 50%; /*Add this*/
+       -webkit-transition: all 1s ease-in-out;
+       -moz-transition: all 1s ease-in-out;
+       transition: all 1s ease-in-out;
+
+       transform: translate(-50%, 0); /*Add this*/
+     }
+     @media only screen and (max-width:344px) {.login-header-transition{top:15%; width: 100%;}}
+     @media only screen and (max-width:580px) {.login-header-transition{top:10%; width: 76%; }}
+
+
+
+
+       .login-header-transition h1 {
+           font-weight: 900;
+           font-size: 45px;
+           color: #b298dc;
+           font-family: monospace;
+           text-transform: uppercase;
+
+       }
+
+
+     /* hover event for header underline transition */
+     .login-form:hover ~ #formtransition {
+      background-color:transparent;
+      color:transparent;
+      display: none;
+      height: 5px;
+      width: 500px;
+      opacity: 1;
+     -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+
+     }
+
+
+
+
+
+
+   .login-body{
+       background-color:#fec1fe;
+       }
+
+
+
+       /* login */
+       .login-form{
+           border-color: transparent;
+           background-color: transparent;
+           position: relative;
+           box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+
+       }
+
+
+       /* login  form header style */
+       .login-header{
+           text-align: center;
+           padding-top:50px;
+           font-size: 45px;
+           font-weight: 900;
+           color:transparent;
+           font-family: monospace;
+           text-transform: uppercase;
+           height:150px;
+       }
+
+
+       .eye {
+           position: absolute;
+           height:140px;
+           width:180px;
+           top:8%;
+           left: 40%;
+           display: none;
+       }
+       @media only screen and (max-width:987px) {.eye{left:35%; }}
+       @media only screen and (max-width:520px) {.eye{left:28%; height: 115px; width: 140px; }}
+       @media only screen and (max-width:390px) {.eye{left:20%; }}
+
+       .login-form:hover ~ .eye{
+           display: flex;
+           animation: 3s anim-lineUp ease-out;
+
+       }
+
+       /* delays  text time in  so it wont jam up */
+       @keyframes anim-lineUp {
+           0% { opacity: 0; transform: translateY(10%); }
+           20% { opacity: 0;}
+           50% { opacity: 1;transform: translateY(0%); }
+           100% {  opacity: 1; transform: translateY(0%); }
+       }
+
+
+       .login-label{
+           font-size:17px;
+           font-family: 'Lato', sans-serif;
+           font-weight: 700;
+           color: gray;
+
+       }
+
+
+
+       /* input background color */
+       .form-control{
+       border-bottom-style: solid;
+       border-top: none;
+       border-right: none;
+       border-left: none;
+       border-bottom-width: 2px;
+       border-bottom-color: #b298dc;
+       background-color:transparent;}
+
+
+
+       .form-control:focus{
+           background-color: transparent;
+           box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+           border-top: none;
+           border-left: none;
+           border-right: none;
+           border-bottom-width: 3px;
+           border-bottom-color: #b298dc;
+       }
+
+       /* input background color when entering values */
+       .form-control:active{
+           border-top: none;
+           border-bottom-color:#b298dc ;
+           border-bottom-width: 3px;
+         }
+
+       /* input background color on hover */
+
+           .form-control:hover{
+               background-color:transparent;
+               border-style: solid;
+               border-top:none;
+               border-left:none;
+               border-right:none;
+               border-bottom-color: #b298dc;
+               border-bottom-width: 4px;
+               }
+
+
+
+
+       /*login button */
+         .login-button{
+         background-color: #b298dc;
+         font-weight:800;
+         color: aliceblue;
+         }
+
+
+          /* login button on hover */
+          .login-button:hover {
+            background-color:aliceblue;
+            color:  #b298dc;
+
+           }
+
+           .remember-me:checked{
+        color: #b298dc;
+        background-color: #b298dc;
+        border-color: #b298dc;
+        box-shadow: #b298dc;
+           }
+
+
+         /* END OFlogin PAGE STYLING */
+
+
+

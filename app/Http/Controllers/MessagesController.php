@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MessagesController extends Controller
 {
@@ -15,8 +16,25 @@ class MessagesController extends Controller
      */
     public function index()
     { 
+        //Time of the day logic
+        $timeOfTheDay = '';
+        $hour = date('H');
+        if($hour >= 00 && $hour <=11){
+            $timeOfTheDay = 'Morning';
+        }elseif($hour >= 12 && $hour <=17){
+            $timeOfTheDay = 'Afternoon';
+        }elseif($hour >= 18 && $hour <=23){
+            $timeOfTheDay = 'Evening';
+        }
+        //Fetch name
+        $name = auth()->user()->name;
+        //Fetch username
         $username = auth()->user()->username;
-        return view('messages.dashboard')->with('username', $username);
+        return view('messages.dashboard')->with([
+            'username'=> $username,
+            'timeOfTheDay' => $timeOfTheDay,
+            'name' => $name
+        ]);
     }
 
     /**
@@ -36,13 +54,38 @@ class MessagesController extends Controller
         $message = new Message();
 
         $this->validate($request,[
-            'message' => 'required|min:5'
+            'message' => 'required|min:5|max:270',
+            'image' => 'image|nullable|max:1999'
         ]);
+
+        if($request->hasFile('image')){
+            $path = $request->file('image')->store('images','public');
+        }else{
+            $path = NULL;
+        }
+
+
+            // FUNCTION TO HELP US FETCH THE IP ADDRESS OF THE WEBSITE VISITORS
+        function getUserIpAddr(){
+            if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+                //ip from share internet
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+                //ip pass from proxy
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            }else{
+                $ip = $_SERVER['REMOTE_ADDR'];
+            }
+            return $ip;
+        }
+
+        $message->ip_address = getUserIpAddr();
+        $message->image = $path;
         $message->message = $request->input('message');
         $message->user_id = $request->input('username');
         $message->save();
 
-        return redirect('/messages')->with('message', 'Now it`s your turn to write');       
+        return back()->with('message', 'Message Sent Successfully. Now it`s your turn to write');       
     }
 
     /**
@@ -53,7 +96,9 @@ class MessagesController extends Controller
      */
     public function show($id)
     {
-        $messages = Message::latest()->paginate(5);
+        //  $username = auth()->user()->user_id;
+        // $user = User::find($username);
+        $messages = Message::where('user_id', Auth::user()->username)->latest()->paginate(5);
         return view('messages.MyMessages')->with('messages', $messages);
     }
     
