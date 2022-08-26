@@ -8,9 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
-
-
-    public function messages(){
-        return $this->belongsTo(User::class, 'username');
-    }
 }

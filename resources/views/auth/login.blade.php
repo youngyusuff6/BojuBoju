@@ -1,25 +1,24 @@
 @extends('layouts.app')
-@section('title') Login @endsection
 
-{{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
-@section('styles')
-    <link rel="stylesheet" href="{{url('vendor/css/style.css')}}">
-@endsection
-
-{{-- MAIN CONTENTS --}}
 @section('content')
+
+
+@push('styles')
+ <link rel="stylesheet" href="{{ asset('../../../../css/login.css') }}">
+@endpush
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="card border-0 bg-transparent" >
+                <div class="card-header border-0 bg-transparent  login-header">{{ __('Welcome Back') }}</div>
 
-                <div class="card-body">
+                <div class="card-body border-0 bg-transparent login-form body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 login-label col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -33,7 +32,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 login-label col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -49,7 +48,7 @@
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <input class="form-check-input remember-me" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
@@ -60,7 +59,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn login-button">
                                     {{ __('Login') }}
                                 </button>
 
@@ -71,15 +70,17 @@
                                 @endif
                             </div>
                         </div>
-                    </form>
+                        </form>
+
+                </div>  <video class="eye" controls>
+                            <source src="../../../../../../Users/Priest/Documents/web-dev/PROJECTs/duo project/build.mp4" type="video/mp4">
+                        </video>
+                 <!-- register-button hover tranition effect -->
+                 <div class="login-header-transition" id="formtransition">
+                <h1>WECLOME BACK</h1>
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
-
-{{-- ADD JS HERE OR IMPORT --}}
-@section('scripts')
-
 @endsection

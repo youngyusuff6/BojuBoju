@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@section('title') Settings @endsection
 @section('content')
     
     <div class="container bg-dark border ms-auto me-auto">

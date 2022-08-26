@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row ms-auto me-auto">
 
-        <div class="col-md-10 offset-2 d-flex">
+        <div class="col-md-10 offset-2">
             <div class="panel panel-default">
                 <h2>Change password</h2>
 
