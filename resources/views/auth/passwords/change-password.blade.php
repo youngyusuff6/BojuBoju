@@ -1,36 +1,41 @@
 @extends('layouts.app')
 
+
+{{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
+@section('styles')
+    <link rel="stylesheet" href="{{url('vendor/css/change-password.css')}}">
+@endsection
 @section('content')
 <div class="container">
     <div class="row ms-auto me-auto">
 
         <div class="col-md-10 offset-2 d-flex">
             <div class="panel panel-default">
-                <h2>Change password</h2>
+                <h1 class="fw-1 fs-2">Change password</h1>
 
                 <div class="panel-body">
                     @if (session('error'))
-                        <div class="alert alert-danger">
+                        <div class="alert fs-2 fw-2 alert-danger">
                             {{ session('error') }}
                         </div>
                     @endif
                     @if (session('success'))
-                        <div class="alert alert-success">
+                        <div class="alert fs-2 fw-2 alert-success">
                             {{ session('success') }}
                         </div>
                     @endif
                     @if($errors)
                         @foreach ($errors->all() as $error)
-                            <div class="alert alert-danger">{{ $error }}</div>
+                            <div class="alert fs-2 fw-2 alert-danger">{{ $error }}</div>
                         @endforeach
                     @endif
                     <form class="form-horizontal" method="POST" action="{{ route('changePasswordPost') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('current-password') ? ' has-error' : '' }}">
-                            <label for="new-password" class="col-md-4 control-label">Current Password</label>
+                            <label for="new-password" class="col-md-8 mt-3 control-label">Current Password</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="current-password" type="password" class="form-control" name="current-password" required>
 
                                 @if ($errors->has('current-password'))
@@ -42,9 +47,9 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('new-password') ? ' has-error' : '' }}">
-                            <label for="new-password" class="col-md-4 control-label">New Password</label>
+                            <label for="new-password" class="col-md-8 mt-3 control-label">New Password</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="new-password" type="password" class="form-control" name="new-password" required>
 
                                 @if ($errors->has('new-password'))
@@ -56,16 +61,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="new-password-confirm" class="col-md-4 control-label">Confirm New Password</label>
+                            <label for="new-password-confirm" class="col-md-8 mt-3 control-label">Confirm New Password</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="new-password-confirm" type="password" class="form-control" name="new-password_confirmation" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn mt-2 change-password-button">
                                     Change Password
                                 </button>
                             </div>

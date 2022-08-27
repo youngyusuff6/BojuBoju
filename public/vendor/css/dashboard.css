@@ -1,0 +1,56 @@
+body{
+    background-image: url('../../../public/vendor/images/eye.gif');
+}
+
+.card-header{
+    display: flex;
+    border-bottom: 2px solid #b2b2b2;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.card-header a{
+    position: absolute;
+    right:10% ;
+
+}
+
+.share-links a{
+ width: 350px;
+
+}
+
+.share-links a:hover{
+ transform: translateY(-4px);
+   }
+
+
+.logout{
+
+    justify-content: end;
+    text-align: end;
+}
+
+svg{
+color: aliceblue;
+}
+
+.insta-share{
+    background-color:#e95950;
+    /* background-image: url('../../../public/vendor/images/insta-color.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+}
+
+.facebook-share{
+    background-color: #4267B2;
+}
+
+.message{
+    background-color: #b298dc;
+}
+
+.whatsapp-share{
+    background-color:#25D366 ;
+}

@@ -75,13 +75,16 @@
                         @else
                             <li class="d-flex nav-item dropdown" >
 
-                           <a id="navbarDropdown"  class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                <!-- user  image -->
+                            <div class="d-block mt-3">
+                                  <!-- user  image -->
                                 <img alt="Qries"  src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" height="40">
-                                {{ Auth::user()->name }}   </a>
+                                <p> {{ Auth::user()->name }} </p>
+                            </div> <a id="navbarDropdown"  class="nav-link mt-5 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                       </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a href="/messages" class="dropdown-item">Dashboard</a>
+                                <a href="/messages" class="dropdown-item">Dashboard</a>
+                                    <a href="/settings" class="dropdown-item">Profile Settings</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
