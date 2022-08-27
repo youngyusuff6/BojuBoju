@@ -107,7 +107,13 @@
         </main>
     </div>
     <footer class='mt-5'>
-        <hr>
+
+        <hr><div class="docs">
+
+         <li>  <a href="vendor/documents/Terms and Conditions.pdf"> Terms and Condition </a></li>
+         |<li>  <a href="vendor/documents/Disclaimer.pdf"> Disclaimer </a></li>
+        | <li>  <a href="vendor/documents/Privacy Policy.pdf"> Privacy and Policy </a></li>
+        </div>
         <p class="text-center">© @php echo date('Y')@endphp BojuBoju | Anonymous Messages. <br> All Rights Reserved.</p>
     </footer>
     @yield('scripts')

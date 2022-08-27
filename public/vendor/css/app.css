@@ -41,6 +41,26 @@ body{
 
 
 
+   .docs{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+   }
+
+   .docs li{
+    list-style-type: none;
+    margin-left: 5px;
+    margin-right: 5px;
+
+   }
+   .docs a{
+    text-decoration: none;
+    color: #b298dc;
+    font-weight: 900;
+   }
 
 
 
