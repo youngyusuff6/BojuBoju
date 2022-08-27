@@ -67,7 +67,7 @@
               <a
                     href="{{ route('logout') }}"
                     onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();" class="btn btn-danger my-3">
+                    document.getElementById('logout-form').submit();" class="btn btn-danger mt-5">
                     Logout
                 </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

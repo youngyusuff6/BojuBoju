@@ -1,5 +1,9 @@
 body{
-    background-image: url('../../../public/vendor/images/eye.gif');
+    background-image: url('../../../public/vendor/images/background-eye.gif');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+
 }
 
 .card-header{
@@ -22,6 +26,7 @@ body{
 
 .share-links a:hover{
  transform: translateY(-4px);
+ background-color: rgba(0, 0, 0,0.2);
    }
 
 

@@ -1,0 +1,38 @@
+b{
+    color: #b298dc;
+}
+
+.header h1{
+    text-transform: uppercase;
+    color: gray;
+    font-weight: 900;
+    font-size: 60px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.headers-paragraph{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.header a{
+    font-weight: 900;
+    color: aliceblue;
+    background-color: #b298dc;
+}
+
+.header a:hover{
+    color:#b298dc;
+    background-color: aliceblue ;
+}
+
+.header a:active{
+   margin-top: 5px;
+   background-color: #9f7bdb;
+
+}
+
+
+

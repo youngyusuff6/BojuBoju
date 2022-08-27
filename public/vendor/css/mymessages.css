@@ -1,0 +1,28 @@
+.message-box{
+    border-color:transparent;
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+
+.card-header{
+    color: #ae90dd;
+    border-color: rgba(0,0,0,0.1);
+}
+
+.card-footer a{
+ background-color: #b298dc;
+ color: aliceblue;
+}
+
+.card-footer a:hover{
+    color: #b298dc;
+    background-color: aliceblue;
+   }
+
+   .card-footer a:active{
+    color: aliceblue;
+    background-color: #ae90dd;
+   }
