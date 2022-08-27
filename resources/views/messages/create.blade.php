@@ -23,6 +23,13 @@
     <link rel="stylesheet" href="{{url('vendor/css/create.css')}}">
 @endsection
 @section('content')
+<body
+style=" background-image: url('vendor/images/background-eye.gif');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+">
+
     <p>
         @if (Session::has('message'))
             <div class="alert alert-success">
@@ -73,4 +80,5 @@
 
 
     </div>
+</body>
 @endsection

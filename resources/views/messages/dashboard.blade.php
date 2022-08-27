@@ -6,10 +6,15 @@
     <link rel="stylesheet" href="{{url('vendor/css/dashboard.css')}}">
 @endsection
 @section('content')
-<body>
+<body
+style=" background-image: url('vendor/images/background-eye.gif');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+">
 
 
-<div class="card bg-transparent  border-0">
+<div class="card bg-transparent body border-0">
     <div class="card-header d-flex bg-transparent ">
         <h1 class="lead   bg-transparent">Good {{$timeOfTheDay}}, <span class="text-info">{{$name}}</span></h1>
       <a href="#" class="btn btn-info text-right ">Share Profile</a>

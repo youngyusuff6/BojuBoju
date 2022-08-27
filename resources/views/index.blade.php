@@ -23,6 +23,11 @@
          <a href="" class="btn fs-3 ">GET STARTED</a>
         </div>
 
+        <div class="text-center mt-5">
+            <h1 class="mt-5 pt-5">About BojuBoju</h1>
+            p
+        </div>
+
         </div>
     </div>
 </div>
