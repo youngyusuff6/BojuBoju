@@ -129,16 +129,19 @@
 
     /* register button */
       .register-button{
-      background-color: rgb(136, 10, 136);
-      font-weight:800;
-      color: aliceblue;
+        font-weight:800;
+       background-image: url('../images/backgroundcolor.jpg');
+           background-repeat: no-repeat;
+             background-size: cover; color:  purple;
+
       }
 
 
        /* register button on hover */
        .register-button:hover {
-         background-color:aliceblue;
-         color:  purple;
+        color: aliceblue;
+        background-image: url('../images/backgroundcolor.jpg');
+        background-repeat:repeat;
 
         }
 
@@ -203,7 +206,7 @@
 
       transition: ease-in 2s;
       width: 320px;
-       background-color: white;
+      background-color:aliceblue;
       }
 
 
@@ -273,7 +276,7 @@
       .register-form:hover ~ .side-card {
       transition: ease-in 2s;
       width: 240px;
-       background-color: rgba(0, 0, 0, 0.2);
+       background-color:aliceblue;
       }
 
 

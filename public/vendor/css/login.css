@@ -162,16 +162,21 @@
 
        /*login button */
          .login-button{
-         background-color: rgb(141, 16, 141);
          font-weight:800;
-         color: aliceblue;
+
+         background-image: url('../images/backgroundcolor.jpg');
+            background-repeat: no-repeat;
+              background-size: cover; color:  purple;
          }
+
 
 
           /* login button on hover */
           .login-button:hover {
-            background-color:aliceblue;
-            color:  purple;
+          color: aliceblue;
+          background-image: url('../images/backgroundcolor.jpg');
+          background-repeat:repeat;
+
 
            }
 

@@ -30,7 +30,7 @@
 
 .share-links a:hover{
  transform: translateY(-4px);
- background-color: rgba(0, 0, 0,0.2);
+ background-color: rgba(0, 0, 0,0.3);
    }
 
 
@@ -44,25 +44,24 @@ svg{
 color: aliceblue;
 }
 
-.insta-share{
-    background-color:#e95950;
-    /* background-image: url('../../../public/vendor/images/insta-color.jpg');
-    background-size: cover;
-    background-repeat: no-repeat; */
 
-}
 
 .facebook-share{
     background-color: #4267B2;
 }
 
 .message{
-    background-color: #b298dc;
     width: 20%;
     background-image: url('../images/backgroundcolor.jpg');
     background-repeat: no-repeat;
-  
+
 }
+.message:hover{
+   background-size: cover;
+   background-repeat: repeat;
+}
+
+
 
 @media only screen and (max-width:1200px) { .message{ width: 30%; }}
 @media only screen and (max-width:770px) { .message{ width: 50%; }}
@@ -73,9 +72,13 @@ color: aliceblue;
 }
 
 
+.insta-share{
+    background-image: url('../images/insta-color.jpg');
+
+}
+
 .insta-share :active{
     background-color:#e95950;
-
 }
 
 .facebook-share :active{

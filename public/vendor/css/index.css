@@ -31,12 +31,18 @@ b{
 .intro-header a{
     font-weight: 900;
     color: aliceblue;
-    background-color: #b298dc;
+    background-image: url('../images/backgroundcolor.jpg');
+    background-repeat: no-repeat;
+
 }
+
+
 
 .intro-header a:hover{
     color:#b298dc;
-    background-color: aliceblue ;
+    background-image: url('../images/backgroundcolor.jpg');
+  background-repeat:repeat;
+  background-size: cover;
 }
 
 .intro-header a:active{
@@ -45,4 +51,16 @@ b{
 
 }
 
+.step-header{
+    font-weight: 900;
+}
+
+.accordion-body{
+   color: aliceblue;
+}
+@media only screen and (max-width:770px){
+.about-card{
+    display: block}
+
+}
 
