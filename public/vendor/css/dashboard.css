@@ -53,3 +53,31 @@ color: aliceblue;
 .whatsapp-share{
     background-color:#25D366 ;
 }
+
+
+.insta-share :active{
+    background-color:#e95950;
+
+}
+
+.facebook-share :active{
+    background-color: #4267B2;
+}
+
+.whatsapp-share :active{
+    background-color:#25D366 ;
+}
+
+.insta-share :focus{
+    background-color:#e95950;
+
+}
+
+.facebook-share :focus{
+    background-color: #4267B2;
+}
+
+.whatsapp-share :focus{
+    background-color:#25D366 ;
+}
+

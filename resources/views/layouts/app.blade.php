@@ -40,67 +40,81 @@
 
     <div id="app">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-md" style="height:80px;  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+
+
+    <nav class="navbar navbar-expand-lg bg-transparent">
+
+    <div class="container-fluid">
+
+    <a class="navbar-brand  " href="{{ url('/') }}">
                 <!-- brand-logo -->
                 <img class="brandlogo" alt="Qries"  src="{{ asset('vendor/images/brandlogo.png')}}" height="80" width="100">
                      <!-- {{ config('app.name', 'BojuBoju | Anonymous Messages') }} -->
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+   @guest <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav  ms-auto">
+       <!-- Right Side Of Navbar -->
+                   <!-- Authentication Links -->
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link "  href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class=" "  href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link"   href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class=""   href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
-                        @else
-                            <li class="d-flex nav-item dropdown" >
 
-                            <div class="d-block mt-3">
-                                  <!-- user  image -->
-                                <img alt="Qries"  src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" height="40">
-                                <p> {{ Auth::user()->name }} </p>
-                            </div> <a id="navbarDropdown"  class="nav-link mt-5 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                       </a>
+      </ul>@else <div class="btn-group mt-2 drop-profile">
+  <button class="btn bg-transparent border-0" type="button">
+  <div class="d-block">
+     <img alt="Qries"  src="vendor/images/profile.png" height="40">
+         <p class=""> {{ Auth::user()->name }} </p>
+        </div>
+  </button>
+  <button type="button" class="btn btn-lg border-0 bg-transparent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu border-0 shadow-sm">
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a href="/messages" class="dropdown-item">Dashboard</a>
-                                    <a href="/settings" class="dropdown-item">Profile Settings</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+  <li>        <a href="/messages" class="dropdown-item">Dashboard</a>    </li>
+    <li>   <a href="/settings" class="dropdown-item">Profile Settings</a>
+                                  </li>
+    <li> <a class="dropdown-item" href="{{ route('logout') }}"
+             onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
+             </a> </li>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+             </form>
                 </div>
-            </div>
-        </nav>
+  </ul>
+</div>
+  </div>
+
+
+ @endguest
+
+
+
+  </div>
+</nav>
+
+
+
+
+
+
 
         <main class="py-4 container">
             @yield('content')

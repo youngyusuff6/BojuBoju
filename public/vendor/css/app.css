@@ -4,6 +4,10 @@ body{
     background-color: #fec1fe;
 }
 
+.navbar-brand{
+    margin-left: 50px;
+}
+
 
 .nav-item :hover{
    color: #b298dc;
@@ -12,31 +16,56 @@ body{
    .navbar{
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
     width:100%;
-
+    height: 98px;
    }
 
+    .navbar-toggler svg{
+    color: #b298dc;
+    font-weight: 900;
+   }
 
-   .nav-item{
+   .navbar-nav {
+    margin-right: 20px;
+   }
+
+   .navbar-nav a{
+   text-decoration: none;
+    color: gray;}
+
+   .navbar-nav li{
     font-family: 'PT Sans', sans-serif;
     font-weight:900;
     font-size:18px;
-    color:gray;
+    margin-right:10px ;
    }
 
-   .profile-dropdown{
-    display: block;
+   .nav-item{
+
+    color:#b298dc;
    }
 
 
+   .drop-profile{
+     margin-right: 25px;
+   }
 
+   .dropdown-menu{
+    background-color: transparent;
+    color: gray;
+    font-size: 17px;
+    font-weight: 900px;
+   }
+
+
+   .dropdown-menu ul :hover{
+    color: #b298dc;
+    background-color: transparent;
+
+   }
 
    .dropdown-item{
     color: gray;
-    font-size: 20px;
-    font-weight: 400px;
-   }
-   .dropdown-item{
-    color: #b298dc;
+
    }
 
 
@@ -59,20 +88,19 @@ body{
    .docs a{
     text-decoration: none;
     color: #b298dc;
-    font-weight: 900;
+    font-weight: 600;
    }
 
+   .docs li :hover{
+    color: aliceblue};
 
 
-   @media only screen and (max-width : 990px) {
-    .navbar-brand img {
-        margin-top: 0px;
-     height: 65px;
+
+   @media only screen and (max-width : 720px) {
+    .navbar-brand {
+        margin-left: 0px;
     }
 
-    .dropdown{
-        display: block;
-    }
 
  }
 

@@ -20,7 +20,7 @@
             Eligendi accusantium aspernatur ipsum, natus tenetur similique dolor ex magnam
             fugiat, ad facere repudiandae voluptatem est alias cupiditate amet iste. Similique, magni.</p>
 
-         <a href="" class="btn fs-3 ">GET STARTED</a>
+         <a  href="{{ route('register') }}" class="btn fs-3 ">GET STARTED</a>
         </div>
 
         <div class="text-center mt-5">

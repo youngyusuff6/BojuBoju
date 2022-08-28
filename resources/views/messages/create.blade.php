@@ -1,19 +1,7 @@
 @extends('layouts.app')
 @section('title') Write a Message @endsection
 @section('styles')
-<style>
-    textarea{
-        width: 100%;
-        height: 100%;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border: 2px solid #cccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        font-size: 16px;
-        resize: none;
-    }
-</style>
+
 @endsection
 @section('scripts')
 @endsection
