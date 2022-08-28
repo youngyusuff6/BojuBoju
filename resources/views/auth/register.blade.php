@@ -19,7 +19,7 @@
 
                 <div class="card-header  register-form-header bg-transparent">{{ __('Sign Up Now') }}</div>
 
-                <div class="card-body form-body" id="form" >
+                <div class="card-body  form-body" id="form" >
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -90,7 +90,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn register-button">
-                                    {{ __('Register') }}
+                                    {{ __('Sign Up') }}
                               <span class="spinner-border spinner-border-sm" id="button-loader" role="status" aria-hidden="true"></span>
                               </button>
                             </div>

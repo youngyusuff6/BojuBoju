@@ -1,4 +1,16 @@
 .back-icon{
-    color: #b298dc;
+    color: aliceblue;
 }
 
+.buttons a{
+    width: 25%;
+    background-image: url('../images/backgroundcolor.jpg');
+    background-repeat: no-repeat;
+    color:black;
+}
+
+.buttons a:hover{
+    transform: scaleZ(-10%);
+   color: aliceblue;}
+
+@media only screen and (max-width:920px){.buttons a{ width: 40%;}}

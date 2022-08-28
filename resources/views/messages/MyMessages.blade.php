@@ -5,11 +5,10 @@
     <link rel="stylesheet" href="{{url('vendor/css/mymessages.css')}}">
 @endsection
 @section('content')
-<body
+<body class="bg-transparent"
 style=" background-image: url('vendor/images/background-eye.gif');
     background-repeat:no-repeat;
-    background-position: center;
-    background-attachment:fixed;">
+    background-position: center;">
 
 
     <div>

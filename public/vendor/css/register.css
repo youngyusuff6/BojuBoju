@@ -3,11 +3,6 @@
 
 
 
-/* registration  page body styling */
-.registration-page-body{
-    background-color:#fec1fe;
-    }
-
 
 
     /* register */
@@ -31,6 +26,7 @@
         border-right: transparent;
         border-bottom: transparent;
         border-top: transparent;
+        color: #b298dc;
     }
 
 
@@ -133,7 +129,7 @@
 
     /* register button */
       .register-button{
-      background-color: #b298dc;
+      background-color: rgb(136, 10, 136);
       font-weight:800;
       color: aliceblue;
       }
@@ -142,7 +138,7 @@
        /* register button on hover */
        .register-button:hover {
          background-color:aliceblue;
-         color:  #b298dc;
+         color:  purple;
 
         }
 
@@ -246,7 +242,6 @@
       .side-card{
         top: 8%;
         left: 0%;
-        background-color: transparent;
         border-style: solid;
         border-color: transparent;
         width:0px;
@@ -278,7 +273,7 @@
       .register-form:hover ~ .side-card {
       transition: ease-in 2s;
       width: 240px;
-       background-color: white;
+       background-color: rgba(0, 0, 0, 0.2);
       }
 
 

@@ -1,13 +1,24 @@
+.body{
+    width: 100%;
+}
+
 b{
     color: #b298dc;
 }
+
+
 
  h1{
     text-transform: uppercase;
     color: gray;
     font-weight: 900;
-    font-size: 60px;
+    font-size: 50px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+} @media only screen and (max-width:345px){  h1{ font-size: 40px; } .headers-paragraph{  width: 85%; }}
+
+.intro-header{
+    width: 100%;
 }
 
 .headers-paragraph{
@@ -17,22 +28,21 @@ b{
     justify-content: center;
 }
 
-.header a{
+.intro-header a{
     font-weight: 900;
     color: aliceblue;
     background-color: #b298dc;
 }
 
-.header a:hover{
+.intro-header a:hover{
     color:#b298dc;
     background-color: aliceblue ;
 }
 
-.header a:active{
+.intro-header a:active{
    margin-top: 5px;
    background-color: #9f7bdb;
 
 }
-
 
 

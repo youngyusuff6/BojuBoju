@@ -2,9 +2,13 @@
 
 .card-header{
     display: flex;
-    border-bottom: 2px solid #b2b2b2;
+    border-bottom: 2px solid purple;
     align-items: center;
     padding-bottom: 10px;
+}
+
+.username{
+    color:aliceblue;
 }
 
 .card-header a{
@@ -14,9 +18,15 @@
 }
 
 .share-links a{
- width: 350px;
+ width: 80%;
+}
+@media only screen and (max-width:365px) {
+    .share-links a{
+        width: 100%;
+       }
 
 }
+
 
 .share-links a:hover{
  transform: translateY(-4px);
@@ -48,7 +58,15 @@ color: aliceblue;
 
 .message{
     background-color: #b298dc;
+    width: 20%;
+    background-image: url('../images/backgroundcolor.jpg');
+    background-repeat: no-repeat;
+  
 }
+
+@media only screen and (max-width:1200px) { .message{ width: 30%; }}
+@media only screen and (max-width:770px) { .message{ width: 50%; }}
+@media only screen and (max-width:456px) { .message{ width: 75%; }}
 
 .whatsapp-share{
     background-color:#25D366 ;

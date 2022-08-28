@@ -6,11 +6,10 @@
 @endsection
 @section('content')
 
-
-<div class="row">
-    <div class="card rounded border-0 bg-transparent ms-auto me-auto">
-        <div class="card-body  rounded mt-5 ms-auto me-auto">
-           <div class="text-center header mt-5">
+<div class="body">
+    <div  style="width:100%; " class="card rounded border-0 bg-transparent ms-auto me-auto">
+        <div style="width:100%; " class="card-body mt-3 rounded  ms-auto me-auto">
+           <div class="text-center mt-5 mb-2 intro-header">
              <p>
                 <h1>Welcome to
                   <br> <b>BojuBoju </b> <br> Anonymous messages</h1>
@@ -31,5 +30,7 @@
         </div>
     </div>
 </div>
+
+</body>
 
 @endsection
