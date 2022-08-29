@@ -89,15 +89,20 @@ padding-top: 5%;
     margin-top:150px ;
 }
 
-.why-cards svg{
-    color: #b298dc;
-    position: absolute;
-    top: 23%;
-    left: 40%;
+.why-cards {
+
+    margin-left: auto;
+    margin-right: auto;
 }
+.why-cards svg{
+     color: #b298dc;
+    padding-top: 10px;
+ }
+
 
 .why-cards p{
-    padding-top: 25%;
+    padding-top: 10%;
+    padding-bottom: 5px;
 
 }
 

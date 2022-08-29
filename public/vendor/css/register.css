@@ -1,6 +1,10 @@
 
                       /* REGISTER PAGE STYLING */
 
+  .register-body{
+        background-color: rgba(0, 0, 0, 0.5);
+         box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+ }
 
 
 
@@ -10,8 +14,6 @@
         border-color: transparent;
         background-color: transparent;
         position: relative;
-        box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
-
     }
 
 
@@ -20,13 +22,12 @@
          border-style: solid;
         border-color: transparent;
         text-align: center;
-        font-size: 35px;
         font-weight: 900;
-        border-left:transparent;
-        border-right: transparent;
-        border-bottom: transparent;
-        border-top: transparent;
-        color: #b298dc;
+        font-size: 45px;
+        color: aliceblue;
+        font-family: monospace;
+        text-transform: uppercase;
+        padding-bottom: 10px;
     }
 
 
@@ -35,7 +36,7 @@
         font-size:17px;
         font-family: 'Lato', sans-serif;
         font-weight: 700;
-        color: gray;
+        color:#b298dc;
 
     }
 
@@ -160,8 +161,9 @@
         .registration-footer li{
             align-items:baseline;
             display: flex;
-             margin-top: 10px;
-              list-style-type: none;
+            margin-top: 10px;
+            list-style-type: none;
+            color: aliceblue;
         }
 
         /* side card information */

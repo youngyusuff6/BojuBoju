@@ -14,7 +14,7 @@
 
 <div class="container" id="form">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 register-body">
             <div class="card register-form">
 
                 <div class="card-header  register-form-header bg-transparent">{{ __('Sign Up Now') }}</div>
@@ -109,8 +109,9 @@
                                         <div class="side-card">
                                     <ul >
                                     <li> Asusred Anonymity</li>
+                                        <li>Verified User Safety </li>
                                         <li>Seamles User Experience</li>
-                                        <li>And More </li>
+
                                     </ul>
             </div>
 

@@ -12,8 +12,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card border-0 bg-transparent" >
+        <div class="col-md-8 login-body">
+            <div class="card border-0  bg-transparent" >
                 <div class="card-header border-0 bg-transparent  login-header">{{ __('Welcome Back') }}</div>
 
                 <div class="card-body border-0 bg-transparent login-form body">

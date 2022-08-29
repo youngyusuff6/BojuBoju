@@ -1,5 +1,12 @@
                   /*login PAGE STYLING */
 
+.login-body{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
 
 
 /*  page body styling*/
@@ -27,7 +34,7 @@
        .login-header-transition h1 {
            font-weight: 900;
            font-size: 45px;
-           color: #b298dc;
+           color: aliceblue;
            font-family: monospace;
            text-transform: uppercase;
 
@@ -60,7 +67,6 @@
            border-color: transparent;
            background-color: transparent;
            position: relative;
-           box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
            color: #f2e7f2;
 
        }
@@ -110,7 +116,7 @@
            font-size:17px;
            font-family: 'Lato', sans-serif;
            font-weight: 700;
-           color: gray;
+           color: #b298dc;
 
        }
 
