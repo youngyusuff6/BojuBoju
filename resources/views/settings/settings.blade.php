@@ -23,7 +23,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
             <a href="/changePassword" class="btn rounded-pill border-0">Change Username</a>
         </div>
         <div class="container text-center mt-3 ms-auto me-auto">
-            <a href="/changePassword" class="btn rounded-pill border-0">Change name</a>
+            <a href="/changePassword" class="btn rounded-pill border-0">Change Email</a>
         </div>
 
         <div class="container text-center mt-3 ms-auto me-auto">

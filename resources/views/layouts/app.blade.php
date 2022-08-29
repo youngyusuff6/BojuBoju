@@ -49,11 +49,11 @@ style="
 
 
 
-    <nav class="navbar navbar-expand-lg bg-transparent">
+    <nav class="navbar navbar-expand-lg sticky-top bg-transparent">
 
     <div class="container-fluid mt-0">
 
-    <a class="navbar-brand mt-0 " href="{{ url('/') }}">
+    <a class="navbar-brand  mt-0 " href="{{ url('/') }}">
                 <!-- brand-logo -->
                 <img class="brandlogo" alt="Qries"  src="{{ asset('vendor/images/BOJU BOJU (5).png')}}" height="80" width="100">
                      <!-- {{ config('app.name', 'BojuBoju | Anonymous Messages') }} -->

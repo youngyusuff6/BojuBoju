@@ -6,7 +6,7 @@
 @endsection
 @section('content')
 <body class="bg-transparent"
-style=" background-image: url('vendor/images/background-eye.gif');
+style=" background-image: url('vendor/images/backgroundcolor.jpg');
     background-repeat:no-repeat;
     background-position: center;">
 

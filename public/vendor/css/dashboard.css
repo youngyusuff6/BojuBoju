@@ -62,6 +62,10 @@ color: aliceblue;
 }
 
 
+svg :hover {
+    margin-left: 5px;
+}
+
 
 @media only screen and (max-width:1200px) { .message{ width: 30%; }}
 @media only screen and (max-width:770px) { .message{ width: 50%; }}
