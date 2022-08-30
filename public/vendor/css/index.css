@@ -51,32 +51,7 @@ b{
 
 }
 
-.step-header button{
-    font-weight: 900;
-    color: purple;
-    background-color: rgba(0,0,0, 0.7);
-}
 
-.step-header button:active{
-    background-color:#b298dc;
-}
-
-.according-btn-icon{
-color: purple;
-}
-
-
-
-.accordion-body{
-   color: aliceblue;
-   background-color: rgba(0,0,0, 0.4);
-}
-
-.why-cards{
-height: 300px;
-background-color: rgba(0,0,0,0.6);
-color: aliceblue;
-}
 
 .why-cards h4{
 font-weight: 900;
@@ -106,7 +81,36 @@ padding-top: 5%;
 
 }
 
+.why-cards{
+height: 335px;
+background-color: rgba(0,0,0,0.6);
+color: aliceblue;
+}
 
+.step-header button{
+    font-weight: 900;
+    color: purple;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+.step-header button:active{
+    background-color:#b298dc;
+}
+
+.according-btn-icon{
+color: purple;
+}
+
+
+.accordion-body a{
+text-decoration: none;
+color: purple;
+}
+
+.accordion-body{
+   color: aliceblue;
+   background-color: rgba(0,0,0, 0.4);
+}
 
 @media only screen and (max-width:770px){
 

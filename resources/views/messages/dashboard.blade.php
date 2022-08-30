@@ -10,7 +10,8 @@
 
 <div style=" background-image: url('vendor/images/background-eye.gif');
     background-repeat:no-repeat;
-    background-position: center;"
+    background-position: center;
+    background-attachment:fixed;"
      class="card bg-transparent body border-0">
     <div class="card-header d-flex bg-transparent ">
         <h1 class="lead   bg-transparent">Good {{$timeOfTheDay}}, <span class="username ">{{$username}}</span></h1>

@@ -81,40 +81,39 @@
 
         <div class="text-center margins mb-5 ">
             <h1 class="mt-5 pt-5">Using <b>BojuBoju </b></h1>
-            <p>You only need these three steps to get started with <b>BojuBoju</b></p>
+            <p>You only need these Three steps to get started with <b>BojuBoju</b></p>
 
             <div class="accordion col-11 ms-4 mt-5 bg-transparent"  id="accordionPanelsStayOpenExample">
   <div class="accordion-item  bg-transparent">
     <h2 class="accordion-header step-header" id="panelsStayOpen-headingOne">
-      <button class="accordion-button collapsed text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        STEP 1
+      <button class="accordion-button collapsed text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         STEP 1
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-      <div class="accordion-body">
-      <strong>  Create An Account On The Register Page And If You Have An Account <a href="/login">Click here</a> </strong>    </div>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
+    <div class="accordion-body">
+      <strong>  Create An Account On The Register Page And If You Have An Account <a href="/login">  Click here</a></strong>    </div>
     </div>
   </div>
   <div class="accordion-item  bg-transparent">
     <h2 class="accordion-header step-header" id="panelsStayOpen-headingTwo">
-      <button class="accordion-button text-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-       STEP 2
+      <button class="accordion-button text-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> STEP 2
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-      <div class="accordion-body">
+      <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionPanelsStayOpenExample">
+    <div class="accordion-body">
         <strong>  Share Your Profile Link Via Any Social Media Platform Of Your Choice
    </strong>  </div>
     </div>
   </div>
   <div class="accordion-item   bg-transparent">
     <h2 class="accordion-header step-header" id="panelsStayOpen-headingThree">
-      <button class="accordion-button text-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-     STEP 3
+      <button class="accordion-button text-warning collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        STEP 3
       </button>
     </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-      <div class="accordion-body">
+      <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree" data-bs-parent="#accordionPanelsStayOpenExample">
+    <div class="accordion-body">
       <strong>   You Are Good To Go  !  </strong>  </div>
     </div>
   </div>
@@ -134,6 +133,7 @@
 
   <div class="text-center margins">
             <h1 class="mt-5  pt-5">About <b>BojuBoju</b> </h1>
+
   </div>
 
 

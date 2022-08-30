@@ -4,12 +4,16 @@
 @section('styles')
     <link rel="stylesheet" href="{{url('vendor/css/mymessages.css')}}">
 @endsection
-@section('content')
-<body class="bg-transparent"
-style=" background-image: url('vendor/images/backgroundcolor.jpg');
-    background-repeat:no-repeat;
-    background-position: center;">
 
+<body
+style=" background-image: url('');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;">
+
+@section('content')
+
+<div>
 
     <div>
         <a href="/messages" class="btn border-0 back-btn"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi back-icon bi-arrow-left-circle-fill" viewBox="0 0 16 16">
@@ -36,7 +40,7 @@ style=" background-image: url('vendor/images/backgroundcolor.jpg');
               @endif
             </p>
           <p>-BojuBoju [@ {{$message->created_at}}]</p>
-          <div class="card-footer bg-transparent">
+          <div class="card-footer message-box bg-transparent">
               <a href="#" class="btn rounded border-0  w-100 rounded-pill">Share response</a>
           </div>
         </div>
@@ -53,5 +57,5 @@ style=" background-image: url('vendor/images/backgroundcolor.jpg');
 <div class="pagination justify-content-center">
     {{$messages->links()}}
 </div>
-</div></body>
-@endsection
+</div></div>
+@endsection</body>

@@ -75,9 +75,8 @@
                         </div>
                         </form>
 
-                </div>  <video class="eye" autoplay loop muted>
-                            <source  src="{{ asset('vendor/images/login-eye.mp4')}}" type="video/mp4">
-                        </video>
+                </div>
+                <img class="eye"  src="{{ asset('vendor/images/login-eye.gif')}}" alt="">
                  <!-- register-button hover tranition effect -->
                  <div class="login-header-transition" id="formtransition">
                 <h1>WECLOME BACK</h1>

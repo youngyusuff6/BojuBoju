@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="{{url('vendor/css/settings.css')}}">
 @endsection
 @section('content')
-<body
+<div
 style=" background-image: url('vendor/images/background-eye.gif');
     background-repeat:no-repeat;
     background-position: center;
-">
+    background-attachment:fixed;">
 
 
  <div class="container text-left mt-5 ">
@@ -35,5 +35,5 @@ style=" background-image: url('vendor/images/background-eye.gif');
     </div> <div class="container text-center mt-3 ms-auto me-auto">
             <a href="#" class="btn btn-danger">Delete Account</a>
         </div>
-</body>
+</div>
 @endsection
