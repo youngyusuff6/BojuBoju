@@ -28,7 +28,14 @@ style=" background-image: url('');
         <div class="card-header fs-5 text-start">Message:</div>
         <div class="card-body">
           <p class="card-text">{{$message->message}}</p>
-          <p>
+
+          <div class="dropdown">
+  <button class="btn image-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Image
+  </button>
+  <ul class="dropdown-menu image-dropdown dropdown-menu-dark">
+    <li>
+  <p>
               @if ($message->image)
               <div class="card">
                <a href="{{asset('storage/'.$message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset('storage/'.$message->image)}}" alt="message_img" style="width:100%"></a>
@@ -39,9 +46,15 @@ style=" background-image: url('');
             -No images attached
               @endif
             </p>
-          <p>-BojuBoju [@ {{$message->created_at}}]</p>
-          <div class="card-footer message-box bg-transparent">
-              <a href="#" class="btn rounded border-0  w-100 rounded-pill">Share response</a>
+
+    </li>
+
+  </ul>
+</div>
+
+                <p>-BojuBoju [@ {{$message->created_at}}]</p>
+                <div class="card-footer message-box bg-transparent">
+              <a href="#" class="btn rounded mt-2 border-0  w-100 rounded-pill">Share response</a>
           </div>
         </div>
       </div>

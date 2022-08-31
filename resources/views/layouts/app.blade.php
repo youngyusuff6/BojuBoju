@@ -55,7 +55,7 @@ style="
 
     <a class="navbar-brand" href="{{ url('/') }}">
                 <!-- brand-logo -->
-                <img class="brandlogo" alt="Qries"  src="{{ asset('vendor/images/brandlogo.png')}}" height="80" width="150">
+                <img class="brandlogo" alt="Qries"  src="{{ asset('vendor/images/brandlogo.png')}}" height="80" width="120">
                  <!-- {{ config('app.name', 'BojuBoju | Anonymous Messages') }} -->
                 </a>
    @guest <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,9 +82,8 @@ style="
 
       </ul>@else <div class="btn-group mt-2 drop-profile">
   <button class="btn bg-transparent border-0" type="button">
-  <div class="d-block">
-     <img alt="Qries"  src="vendor/images/profile.png" height="40">
-         <p class=""> {{ Auth::user()->name }} </p>
+  <div class="d-block username">
+       <p class=""> {{ Auth::user()->name }} </p>
         </div>
   </button>
   <button type="button" class="btn btn-lg border-0 bg-transparent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">

@@ -15,7 +15,7 @@
      class="card bg-transparent body border-0">
     <div class="card-header d-flex bg-transparent ">
         <h1 class="lead   bg-transparent">Good {{$timeOfTheDay}}, <span class="username ">{{$username}}</span></h1>
-      <a href="#" class="btn btn-info text-right ">Share Profile</a>
+      <a href="#" class="btn btn-info">Share Profile</a>
       </div>
     <div class="card-body  bg-transparent border-0">
         <p>You're logged in!</p>

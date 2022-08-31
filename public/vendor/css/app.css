@@ -1,6 +1,6 @@
 
 .navbar-brand{
-
+margin-left: 5%;
 }
 
 
@@ -39,6 +39,11 @@
 
    .drop-profile{
      margin-right: 6%;
+   }
+
+   .username p {
+    font-weight: 900;
+    font-size: 20px;
    }
 
    .dropdown-menu{
@@ -140,3 +145,30 @@
 
 
 
+
+     @media only screen and (max-width:400px){
+
+   .drop-profile{
+    margin-right: 0%;
+  }
+
+
+.navbar-brand{
+    margin-left: 0%;
+    width: 20px;
+    }
+
+    .navbar-brand img{
+        height: 60px;
+        width: 90px;
+        }
+
+
+        .username p {
+            font-weight: 600;
+            font-size: 15px;
+           }
+
+
+
+     }
