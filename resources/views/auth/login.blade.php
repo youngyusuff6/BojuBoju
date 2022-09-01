@@ -79,7 +79,7 @@
                 <img class="eye"  src="{{ asset('vendor/images/login-eye.gif')}}" alt="">
                  <!-- register-button hover tranition effect -->
                  <div class="login-header-transition" id="formtransition">
-                <h1>WECLOME BACK</h1>
+                <h1>WELCOME BACK</h1>
                 </div>
             </div>
         </div>

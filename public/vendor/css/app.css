@@ -20,8 +20,8 @@ margin-left: 5%;
     font-weight: 900;
    }
 
-   .navbar-nav {
-    margin-right: 20px;
+   .navbar-collapse{
+    width: 100%;
    }
 
    .navbar-nav a{
@@ -51,6 +51,7 @@ margin-left: 5%;
     color:aliceblue;
     font-size: 17px;
     font-weight: 900px;
+
    }
 
 
@@ -172,3 +173,13 @@ margin-left: 5%;
 
 
      }
+
+
+
+     @media only screen and (max-width:800px){
+
+     .dropdown-menu{
+        position:absolute;
+        right:10%;
+       }
+    }

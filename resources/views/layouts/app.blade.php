@@ -26,7 +26,7 @@
 
 
     <!-- web icon -->
-    <link rel = "icon" href ="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtHDYkP6gvC3kafpfS_v68YOz0cp-P3sqZlpFyB1ya7sF-x1t8eORa64x1KcWBaBNne16O5SHgM_LyjG5Vb396Bz3QfO6ElbgpA4fwaVIXytxBIqC5Wp7iQodrqH9pyUVDVpd1bR09VDyt4ronc4luisoapQuf0Fx4TXz7ax8vYb1B59Z3FnEhk0gVsw/s1600/output-onlinepngtools-_4_.ico"  type = "image/x-icon" height="50px" width="80px">
+    <link rel = "icon" href ="web-icon.ico"  type = "image/x-icon" height="50px" width="80px">
 
     <!-- Font-Awesome -->
     <script src="https://kit.fontawesome.com/f335250b9c.js" crossorigin="anonymous"></script>
@@ -38,18 +38,18 @@
 
 <body
 style="
-   background-image: url('vendor/images/backgroundcolor.jpg');
-    background-repeat:no-repeat;
+    background-image: url('vendor/images/backgroundcolor.jpg');
     background-position: center;
+    background-attachment:scroll;
     background-size:cover;
-    background-attachment:fixed;
+    background-repeat:no-repeat;
 ">
 
     <div id="app">
 
 
 
-    <nav class="navbar navbar-expand-lg sticky-top bg-transparent">
+    <nav class="navbar mb-5 navbar-expand-lg bg-transparent">
 
     <div class="container-fluid mt-0">
 
@@ -63,33 +63,43 @@ style="
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
 </svg>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav  ms-auto">
+    <div class="collapse navbar-collapse navbar-collapse-lg" id="navbarNav">
+      <ul class="navbar-nav pb-5">
        <!-- Right Side Of Navbar -->
                    <!-- Authentication Links -->
 
                             @if (Route::has('login'))
-                                <li class="nav-item">
+                                <li class="nav-item ">
                                     <a class=" "  href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                             @endif
 
-                            @if (Route::has('register'))
+
+                        @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class=""   href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class=""   href="{{ route('register') }}">{{ __('Sign up') }}</a>
                                 </li>
                             @endif
 
-      </ul>@else <div class="btn-group mt-2 drop-profile">
-  <button class="btn bg-transparent border-0" type="button">
-  <div class="d-block username">
-       <p class=""> {{ Auth::user()->name }} </p>
-        </div>
-  </button>
-  <button type="button" class="btn btn-lg border-0 bg-transparent dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-    <span class="visually-hidden">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu border-0 shadow-sm">
+
+      </ul>@else
+
+
+
+
+
+
+
+
+<div class="btn-group">
+  <button type="button" class="btn d-flex btn-transparent ps-5 pe-5" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+
+  <h5 class="mt-1 pe-1 "> {{ Auth::user()->name }}     </h5>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi mt-2 bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+</button>
+  <ul class="dropdown-menu dropdown-menu-end border-0 dropdown-menu-lg-start">
 
   <li>        <a href="/messages" class="dropdown-item">Dashboard</a>    </li>
     <li>   <a href="/settings" class="dropdown-item">Profile Settings</a>
@@ -105,6 +115,16 @@ style="
              </form>
                 </div>
   </ul>
+</div>
+
+
+
+
+
+
+
+
+
 </div>
   </div>
 
@@ -128,7 +148,7 @@ style="
     </div>
     <footer style="position:relative ;" class='mt-5'>
          <hr>
-
+<!--
 <div class="contact-us">
 
             <h5>Connect With Us</h5>
@@ -162,7 +182,7 @@ style="
 </svg>
 
 </a>
-        </div>
+        </div> -->
 
 
        <div class="docs">

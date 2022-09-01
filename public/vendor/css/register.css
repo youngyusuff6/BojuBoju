@@ -168,7 +168,7 @@
 
         /* side card information */
       .side-card{
-        position: fixed;
+        position: absolute;
         top: 30%;
         left: 0%;
         background-color: transparent;

@@ -105,7 +105,7 @@
                                 </li></div>
                         </div>
                     </form>
-                </div>   <!-- side-card transition effect -->
+                </div><!-- side-card transition effect -->
                                         <div class="side-card">
                                     <ul >
                                     <li> Asusred Anonymity</li>

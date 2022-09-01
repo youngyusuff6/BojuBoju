@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{url('vendor/css/mymessages.css')}}">
 <style>
 #body{
-  background-image: url('vendor/images/background-eye.gif');
+  background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAAjAEADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAYEBQcCAwH/xAAlEAABAwQCAgEFAAAAAAAAAAABAAIEAwURIRIiMTJCExVBUqH/xAAZAQADAQEBAAAAAAAAAAAAAAACAwQAAQb/xAAcEQACAwADAQAAAAAAAAAAAAAAAQIDEQQTITH/2gAMAwEAAhEDEQA/AIdspjITdbKQwEoW2sMjYTfa6oICbNHpJz2PhfUKIIGl2+KHDwuorwQpgwQkMhlY0yik28OB6qin2wb6p2qMBUCXHaQdLiQ6vkNGZXK34zpLU2JxJ0tMusQYOkm3OOATpVVR0101JaQbdMwRtOVpmDA2swhSeJG00W24cQNrT9E1W6sZqESYOI2prZjceUgx7uGtHZSPvYHy/qUoaFKCY8iW0/lcVK7SDtJtK9A/JSm3YOHsj6wOsm3NzS0pKu7hlyup1xDmnaVLpK5E7VFawVa8Qlx3HI2raK9w8OKEJTFVFgyrUwOxX36tT9ihCyK18PejVfn2KsKdV+PYoQmxCiecmo/iexVDNe4k5KEIiW8//9k=');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
@@ -33,22 +33,24 @@
           <p class="card-text">{{$message->message}}</p>
 
           @if ($message->image)
-  <p>
-   <div class="dropdown card" style="width: 100%">
-      <button class="btn image-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      View Image
+ <div class="accordion col-11 ms-4 mt-5 bg-transparent"  id="accordionPanelsStayOpenExample">
+  <div class="accordion-item  bg-transparent">
+    <h2 class="accordion-header step-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button collapsed text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+       Image
       </button>
-      <ul class="dropdown-menu image-dropdown dropdown-menu-dark card-body">
-        <div>
-                <div class="card">
+    </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
+    <div class="accordion-body">
+          <div class="card">
                 <a href="{{asset('storage/'.$message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset('storage/'.$message->image)}}" alt="message_img" style="width:100%"></a>
                   <div class="card-body">
                   </div>
               </div>
-            </div>
-      </ul>
-   </div>
-  </p>
+    </div>
+  </div>
+</div>
+  
             @else
             <p>
             {{-- -No images attached --}}

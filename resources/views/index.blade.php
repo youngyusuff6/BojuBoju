@@ -6,13 +6,13 @@
 @endsection
 @section('content')
 
-<div class="body">
+<div class="body" >
     <div  style="width:100%; " class="card rounded border-0 bg-transparent ms-auto me-auto">
         <div style="width:100%; " class="card-body mt-3 rounded  ms-auto me-auto">
 
 
         <!-- page header  -->
-        <div class="text-center mt-5 mb-5 intro-header">
+        <div class="text-center header mt-5 mb-5 intro-header">
              <p>
                 <h1>Welcome to
                   <br> <b>BojuBoju </b> <br> Anonymous messages</h1>
