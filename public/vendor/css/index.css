@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+
+
 .body{
     width: 100%;
 }
@@ -13,9 +17,9 @@ b{
     color: gray;
     font-weight: 900;
     font-size: 50px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto Slab', serif;
 
-} @media only screen and (max-width:345px){  .header h1{ font-size: 29px; } .headers-paragraph{  width: 95%; }}
+} @media only screen and (max-width:345px){  h1{ font-size: 29px; } .headers-paragraph{  width: 95%; }}
 
 .intro-header{
     width: 100%;
@@ -34,6 +38,9 @@ b{
     background-image: url('../images/backgroundcolor.jpg');
     background-repeat: no-repeat;
 
+}
+p{
+    font-family:'quicksand';
 }
 
 
@@ -57,11 +64,12 @@ b{
 font-weight: 900;
 color: #b298dc;
 padding-top: 5%;
+font-family:'quicksand';
 
 }
 
 .margins{
-    margin-top:150px ;
+    margin-top:100px ;
 }
 
 .why-cards {
@@ -77,6 +85,7 @@ padding-top: 5%;
 
 .why-cards p{
     padding-top: 10%;
+    font-family:'quicksand';
     padding-bottom: 5px;
 
 }
@@ -85,6 +94,10 @@ padding-top: 5%;
 height: 335px;
 background-color: rgba(0,0,0,0.6);
 color: aliceblue;
+}
+
+.why-cards-body{
+ overflow: auto;
 }
 
 .step-header button{
@@ -111,6 +124,8 @@ color: purple;
    color: aliceblue;
    background-color: rgba(0,0,0, 0.4);
 }
+@media only screen and (max-width:420px){.accordion{ margin-left: auto;
+    margin-right: auto;}}
 
 @media only screen and (max-width:770px){
 

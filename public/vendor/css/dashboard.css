@@ -81,6 +81,10 @@ svg :hover {
 
 }
 
+.account-settings{
+  background-color: #b298dc;
+}
+
 .insta-share :active{
     background-color:#e95950;
 }

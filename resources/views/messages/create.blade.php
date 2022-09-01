@@ -25,8 +25,8 @@ style=" background-image: url('vendor/images/background-eye.gif');
             </div>
         @endif
     </p>
-    <div class="container border rounded ms-auto me-auto">
-        <div class="text-center mx-3"><h3 class="lead display-5">Write anonymously..</h3></div>
+    <div class="container border-0 rounded ms-auto me-auto">
+        <div class="text-center message-header fw-2 mx-3"><h3 class="lead display-5">Send A Secret Message..</h3></div>
         <div>
             <form action='/messages' method="post" enctype="multipart/form-data">
                 @csrf
@@ -35,24 +35,24 @@ style=" background-image: url('vendor/images/background-eye.gif');
                 type="hidden"
                 name="username"
                 value="{{$username['username']}}">
-                <div class="form-group mb-2">
+                <div class="form-group mb-2 ">
 
-                    <textarea
+                    <textarea style="background-color:rgba(23,67,68,0.5); color:aliceblue;box-shadow:rgba(23,69,0,0.5);"
                     name='message'
-                    class="form-control"
-                    placeholder="Send your text here"
+                    class="form-control message-box border-3"
+                    placeholder="Send your message here"
                     rows="10">
                     {{@old('message')}}
                     </textarea>
                     @error('message')
                     <span class="text-danger">
                         <small>{{ $message }}</small>
-                    </span>
-                    @enderror
+                        </span>
+                        @enderror
                 </div>
 
                 <div class="form-group mt-2">
-                    <input type="file" name="image">
+                    <input type="file" placeholder="Add Image" name="image">
                     @error('image')
                     <p class="text-danger">
                         <small>{{ $message }}</small>

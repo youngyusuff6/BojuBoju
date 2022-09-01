@@ -12,15 +12,15 @@
 
 
         <!-- page header  -->
-        <div class="text-center header mt-5 mb-5 intro-header">
+        <div class="text-center header mt-2 mb-5 intro-header">
              <p>
                 <h1>Welcome to
                   <br> <b>BojuBoju </b> <br> Anonymous messages</h1>
 
             </p>
-            <p class="headers-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eligendi accusantium aspernatur ipsum, natus tenetur similique dolor ex magnam
-            fugiat, ad facere repudiandae voluptatem est alias cupiditate amet iste. Similique, magni.</p>
+            <p class="headers-paragraph"><b>BojuBoju</b> is an interactive anonymous messaging app
+                with an interesting dare game. Create your Profile Link by <a style="text-decoration:none ; color:orange;background-image:none;" href="/login">signing up </a>and sharing the link to all your contacts to check what your friends think about you. With<b> BojuBoju</b>,
+                 you can send and receive anonymous messages from anyone for free!</p>
 
          <a  href="{{ route('register') }}" class="btn border-0 fs-3 ">GET STARTED</a>
         </div>
@@ -36,7 +36,7 @@
 
 <div class="card-group why-card">
   <div class="card me-2 why-cards mt-5 ms-2  ">
-      <div class="card-body">
+      <div class="card-body why-cards-body">
       <h4 class="card-title">Assured Anonymity</h4>
       <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -48,7 +48,8 @@
     </div>
   </div>
   <div class="card me-2 why-cards mt-5 ms-2 ">
-      <div class="card-body">
+
+      <div class="card-body why-cards-body">
 
       <h4 class="card-title">Verified User Safety</h4>
       <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
@@ -60,7 +61,8 @@
     </div>
   </div>
   <div class="card me-2 why-cards mt-5 ms-2">
-      <div class="card-body">
+
+      <div class="card-body why-cards-body">
 
       <h4 class="card-title">Seamless User Experience</h4>
        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-hearts" viewBox="0 0 16 16">
@@ -83,7 +85,7 @@
             <h1 class="mt-5 pt-5">Using <b>BojuBoju </b></h1>
             <p>You only need these Three steps to get started with <b>BojuBoju</b></p>
 
-            <div class="accordion col-11 ms-4 mt-5 bg-transparent"  id="accordionPanelsStayOpenExample">
+            <div class="accordion col-11 ms-auto me-auto mt-5 bg-transparent"  id="accordionPanelsStayOpenExample">
   <div class="accordion-item  bg-transparent">
     <h2 class="accordion-header step-header" id="panelsStayOpen-headingOne">
       <button class="accordion-button collapsed text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -92,7 +94,7 @@
     </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
     <div class="accordion-body">
-      <strong>  Create An Account On The Register Page And If You Have An Account <a href="/login">  Click here</a></strong>    </div>
+      <strong>  Create An Account On The Register Page And If You Have An Account <b><a style="text-decoration:none ; color:orange;" href="/login">  Click here</a></strong></b>    </div>
     </div>
   </div>
   <div class="accordion-item  bg-transparent">

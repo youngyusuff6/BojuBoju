@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+
 
 
 
@@ -39,11 +42,31 @@
    }
 
 
-.image-button{
+.accordion-button{
 background-color: #b298dc;
+color: aliceblue;
+width:50%;
+
+height:40px;
+font-weight: 800;
+font-family:"quicksand";
+margin-left: auto;
+margin-right: auto;
+}
+
+.accordion-button:focus{
+    background-color: #c2b2dc;
+    color: aliceblue;
+    box-shadow: rgba(0,0,0,0);
+
+}
+
+.accordion-button:active{
+   margin-top: 5px;
+
 }
 
    .image-dropdown
 {
-    background-color:rgba(0,0,0,0.9);
+    background-color:transparent;
 }

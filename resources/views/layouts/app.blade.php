@@ -59,12 +59,12 @@ style="
                  <!-- {{ config('app.name', 'BojuBoju | Anonymous Messages') }} -->
                 </a>
    @guest <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
 </svg>
     </button>
-    <div class="collapse navbar-collapse navbar-collapse-lg" id="navbarNav">
-      <ul class="navbar-nav pb-5">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav  ms-auto">
        <!-- Right Side Of Navbar -->
                    <!-- Authentication Links -->
 
@@ -89,13 +89,11 @@ style="
 
 
 
+<div class="btn-group profile-btn-group text-center">
+  <button  class="btn profile-btn d-flex " data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
 
-
-<div class="btn-group">
-  <button type="button" class="btn d-flex btn-transparent ps-5 pe-5" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-
-  <h5 class="mt-1 pe-1 "> {{ Auth::user()->name }}     </h5>
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi mt-2 bi-caret-down-fill" viewBox="0 0 16 16">
+  <h5 class="mt-1 "> {{ Auth::user()->name }}     </h5>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi me-auto pe-auto mt-2 bi-caret-down-fill" viewBox="0 0 16 16">
   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
 </svg>
 </button>
