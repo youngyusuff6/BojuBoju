@@ -14,8 +14,10 @@ class CreateMessagesTable extends Migration
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
-            $table->id();
-            $table->string('user_id')->constrained();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('username')->constrained();
             $table->string('message');
             $table->string('image')->nullable();
             $table->string('ip_address')->nullable();

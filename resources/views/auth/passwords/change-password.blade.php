@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-
+@section('title') Change Password @endsection
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
 @section('styles')
     <link rel="stylesheet" href="{{url('vendor/css/change-password.css')}}">
@@ -18,11 +18,11 @@
         </div>
 
 
-<div class="container  col-12">
+<div class="container">
 
-    <div class="row col-12 change-password">
+    <div class="row change-password">
 
-        <div class="col-md-8 mt-1  d-flex">
+        <div class="col-md-12 col-sm-12 ms-auto me-auto mt-3">
             <div class="panel change-password-body pb-3 pt-2 panel-default">
                 <h1 class="fw-1 change-password-header ms-5 pe-5 fs-2">Change password</h1>
 
@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
+                            <div class="col-md-8 col-md-offset-4 mt-3">
                                 <button type="submit" class="btn mt-2 change-password-button">
                                     Change Password
                                 </button>

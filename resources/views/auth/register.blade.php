@@ -24,24 +24,10 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label register-label text-md-end">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input autocomplete="off"  id="name" type="text" class="form-control  @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
                             <label for="username" class="col-md-4 col-form-label register-label text-md-end">{{ __('Username') }}</label>
 
                             <div class="col-md-6">
-                                <input autocomplete="off"  id="username" type="text" class="form-control  @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                <input autocomplete="off"  id="username" type="username" class="form-control  @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
                                 @error('username')
                                     <span class="invalid-feedback" role="alert">
@@ -99,8 +85,7 @@
                                  </div>
                             </div>
                        <div class="d-flex mt-4 registration-footer">
-                            <li > <p>if you have an Account already</p>
-
+                            <li > <p>Do you have an account?</p>
                          <a class="nav-link" href="{{ route('login') }}">  {{ __('Click here') }}</a>
                                 </li></div>
                         </div>
@@ -108,9 +93,9 @@
                 </div><!-- side-card transition effect -->
                                         <div class="side-card">
                                     <ul >
-                                    <li> Asusred Anonymity</li>
+                                    <li> Assured Anonymity</li>
                                         <li>Verified User Safety </li>
-                                        <li>Seamles User Experience</li>
+                                        <li>Seamless User Experience</li>
 
                                     </ul>
             </div>

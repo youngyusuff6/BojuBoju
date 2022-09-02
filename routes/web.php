@@ -18,7 +18,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-
+//FOOTER ROUTES
+Route::get('/termsAndConditions', [App\Http\Controllers\FooterController::class, 'terms'])->name('terms');
+Route::get('/disclaimer', [App\Http\Controllers\FooterController::class, 'disclaimer'])->name('disclaimer');
+Route::get('/privacy-policy', [App\Http\Controllers\FooterController::class, 'privacy'])->name('privacy');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/dashboard',[MessagesController::class, 'dashboard']);
@@ -32,3 +35,4 @@ Auth::routes();
 Route::resource('messages', 'App\Http\Controllers\MessagesController');
 Route::get('/settings',[App\Http\Controllers\MessagesController::class, 'getSettings']);
 Route::get('/{username}',[App\Http\Controllers\MessagesController::class, 'display']);
+

@@ -51,6 +51,10 @@ class MessagesController extends Controller
      */
        public function store(Request $request){
         $username = $request->input('username');
+        $userid = User::where('users.username','=', $username)->get('users.id');
+        foreach ($userid as $userid) {
+            $user_id = $userid->id;
+        }
         $message = new Message();
 
         $this->validate($request,[
@@ -82,7 +86,8 @@ class MessagesController extends Controller
         $message->ip_address = getUserIpAddr();
         $message->image = $path;
         $message->message = $request->input('message');
-        $message->user_id = $request->input('username');
+        $message->username = $request->input('username');
+        $message->user_id = $user_id;
         $message->save();
 
         return back()->with('message', 'Message Sent Successfully. Now it`s your turn to write');       
@@ -98,7 +103,7 @@ class MessagesController extends Controller
     {
         //  $username = auth()->user()->user_id;
         // $user = User::find($username);
-        $messages = Message::where('user_id', Auth::user()->username)->latest()->paginate(5);
+        $messages = Message::where('username', Auth::user()->username)->latest()->paginate(5);
         return view('messages.MyMessages')->with('messages', $messages);
     }
     

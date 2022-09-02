@@ -71,7 +71,7 @@
 @else
 <div class="container text-center">
     <div class="card bg-light mb-3  ms-auto me-auto mt-2 rounded border-dark" style="max-width: 18rem;">
-        <div class="card-header text-start">No recent messages</div>
+        <div class="card-header message-box rounded border-2 text-light" style="max-width: 20rem;">No recent messages</div>
       </div>
 @endif
 <div class="pagination justify-content-center mt-3">

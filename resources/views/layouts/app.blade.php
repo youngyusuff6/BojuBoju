@@ -91,9 +91,8 @@ style="
 
 <div class="btn-group profile-btn-group text-center">
   <button  class="btn profile-btn d-flex " data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-
-  <h5 class="mt-1 "> {{ Auth::user()->name }}     </h5>
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi me-auto pe-auto mt-2 bi-caret-down-fill" viewBox="0 0 16 16">
+  <h5 class="mt-1 "> {{ Auth::user()->username }}</h5>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" fill="currentColor" class="bi me-auto pe-auto mt-2 bi-caret-down-fill" viewBox="0 0 16 16">
   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
 </svg>
 </button>
@@ -185,9 +184,9 @@ style="
 
        <div class="docs">
 
-         <li>  <a href="vendor/documents/Terms and Conditions.pdf"> Terms and Condition </a></li>
-         |<li>  <a href="vendor/documents/Disclaimer.pdf"> Disclaimer </a></li>
-        | <li>  <a href="vendor/documents/Privacy Policy.pdf"> Privacy and Policy </a></li>
+         <li>  <a href="{{route('terms')}}"> Terms and Condition </a></li>
+         |<li>  <a href="{{route('disclaimer')}}"> Disclaimer </a></li>
+        | <li>  <a href="{{route('privacy')}}"> Privacy and Policy </a></li>
         </div>
 
 
