@@ -35,11 +35,11 @@
           <p class="card-text">{{$message->message}}</p>
 
           @if ($message->image)
- <div class="accordion col-11 ms-4 mt-5 bg-transparent"  id="accordionPanelsStayOpenExample">
+ <div class="accordion col-11 ms-4 mt-1 bg-transparent"  id="accordionPanelsStayOpenExample">
   <div class="accordion-item border-0  bg-transparent">
     <h2 class="accordion-header  border-0 step-header" id="panelsStayOpen-headingOne">
-      <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-     Image
+      <button class="accordion-button bg-transparent collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Image
       </button>
     </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
