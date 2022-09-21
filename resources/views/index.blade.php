@@ -19,7 +19,7 @@
 
             </p>
             <p class="headers-paragraph"><b>BojuBoju</b> is an interactive anonymous messaging app
-                with an interesting dare game. Create your Profile Link by <a style="text-decoration:none ; color:orange;background-image:none;" href="/login">signing up </a>and sharing the link to all your contacts to check what your friends think about you. With<b> BojuBoju</b>,
+                with an interesting dare game. Create your Profile Link by <a style="text-decoration:none ; color:orange;background-image:none;" href="/register">signing up </a>and sharing the link to all your contacts to check what your friends think about you. With<b> BojuBoju</b>,
                  you can send and receive anonymous messages from anyone for free!</p>
 
          <a  href="{{ route('register') }}" class="btn border-0 fs-3 ">GET STARTED</a>
@@ -56,7 +56,7 @@
   <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
 </svg>
       <p class="card-text">Safety of our users using this anonymous messaging platform is very important to us.
-         We have got reporting systems so  you can report anything that you do not wish to see.</p>
+         We have reporting systems so  you can report things you do not wish to see.</p>
 
     </div>
   </div>
@@ -68,7 +68,7 @@
        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-hearts" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566ZM9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z"/>
 </svg>
-      <p class="card-text">We are constantly working on BojuBoju as a platform so you can experience a friendly user experience. fill in your username and password to get started.
+      <p class="card-text">We are always working on BojuBoju as a platform so you can experience a friendly user experience. fill in your username and password to get started.
         <a href="#accordionPanelsStayOpenExample">Click here</a>  to view the easy steps  </p>
 
     </div>

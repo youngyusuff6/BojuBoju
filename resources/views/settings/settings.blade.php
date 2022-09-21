@@ -33,7 +33,47 @@ style=" background-image: url('vendor/images/background-eye.gif');
 
 
     </div> <div class="container text-center mt-3 ms-auto me-auto">
-            <a href="#" class="btn btn-danger">Delete Account</a>
+          <a type="button" class=" text-center ms-auto me-auto btn btn-danger btn-md preview-button" data-bs-toggle="modal" data-bs-target="#exampleModal1" >
+
+          Delete Account
+</a>
         </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <!-- 1st Modal -->
+         <div class="modal   fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered   bg-transparent modal-sm">
+    <div class="modal-content   confirm-delete ">
+     <div class="modal-body text-end bg-transparent">
+
+     <button type="button" class="btn-close-white  btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="text-start">
+
+  <div class="modal-header  border-0 bg-transparent">
+        Are you sure you want to Delete your Account
+        </div>
+  </div>
+  <div class="text-center">
+ <a href="#" class="btn btn-danger">Delete Account</a>
+  </div>
+</div>
+  </div>
+</div>
+
+
 @endsection
