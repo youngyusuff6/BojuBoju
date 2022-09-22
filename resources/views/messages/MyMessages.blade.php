@@ -38,11 +38,11 @@
  <div class="accordion col-11 ms-4 mt-1 bg-transparent"  id="accordionPanelsStayOpenExample">
   <div class="accordion-item border-0  bg-transparent">
     <h2 class="accordion-header  border-0 step-header" id="panelsStayOpen-headingOne">
-      <button class="accordion-button bg-transparent collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <button class="accordion-button bg-transparent collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{"_".$message->id}}" aria-expanded="true" aria-controls="collapseOne">
         Image
       </button>
     </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
+      <div id="collapseOne{{"_".$message->id}}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
     <div class="accordion-body border-0 image-dropdown">
           <div class="card border-0 image-dropdown">
                 <a href="{{asset('storage/'.$message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset('storage/'.$message->image)}}" alt="message_img" style="width:100%"></a>
