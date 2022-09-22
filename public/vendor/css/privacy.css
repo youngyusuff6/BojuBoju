@@ -1,0 +1,36 @@
+
+
+h1{
+ color: purple;
+ padding-top: 50px;
+}
+
+li{
+    color: silver;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #b298dc;
+}
+
+.text-body{
+    background-color:rgba(0, 0, 0,0.7);
+    padding:50px 50px 50px 50px;
+    border-radius:1% ;
+
+}
+
+p{
+margin-top: 10px;
+color: aliceblue;
+}
+
+b{
+    color: purple;
+}
+
+.paragraph{
+    color: aliceblue;
+}

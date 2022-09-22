@@ -26,7 +26,7 @@
 
 
     <!-- web icon -->
-    <link rel = "icon" href ="web-icon.ico"  type = "image/x-icon" height="50px" width="80px">
+    <link rel = "icon" href ="{{ asset('vendor/images/web-icon.ico')}} "  type = "image/x-icon" height="50px" width="80px">
 
     <!-- Font-Awesome -->
     <script src="https://kit.fontawesome.com/f335250b9c.js" crossorigin="anonymous"></script>

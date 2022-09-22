@@ -3,7 +3,7 @@
 
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
 @section('styles')
-    <link rel="stylesheet" href="{{url('vendor/css/dashboard.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/css/termsandcondition.css')}}">
 @endsection
 @section('content')
 
@@ -11,19 +11,28 @@
 <div style=" background-image: url('vendor/images/background-eye.gif');
     background-repeat:no-repeat;
     background-position: center;
-    background-attachment:fixed;"
-    class="card bg-transparent body border-0">
+    background-attachment:fixed;
+    justify-content:center;
+    text-align: center;"
+    >
 
-    <div>
-        <h2 class="display-1">Terms and Conditions</h2>
-        <p>
-           <h5 class="display-5"> Welcome to BojuBoju! </h5>
-                These terms and conditions outline the rules and regulations for the use of
-                BojuBoju's Website, located at BojuBoju.com.
+    <div class="text-body" >
+        <h3 class="display-3 mb-5">
+             Terms and Conditions
+         </h3>
+         <h5 class="mb-3 fs-3">
+             <b>Welcome to BojuBoju!</b>
+         </h5>
+             <p class="paragraph">
+             These terms and conditions outline the rules and regulations for the use of
+                BojuBoju's Website, located at BojuBoju.xyz.
+                <p>
                 By accessing this website we assume you accept these terms and conditions. Do
-                not continue to use BojuBoju if you do not agree to take all of the terms and
-                conditions stated on this page.
-                The following terminology applies to these Terms and Conditions, Privacy
+                 not continue to use BojuBoju if you do not agree to take all of the terms and
+                 conditions stated on this page.
+                </p>
+            <p>
+                 The following terminology applies to these Terms and Conditions, Privacy
                 Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your"
                 refers to you, the person log on this website and compliant to the Company’s
                 terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers
@@ -35,9 +44,11 @@
                 prevailing law of Netherlands. Any use of the above terminology or other words in
                 the singular, plural, capitalization and/or he/she or they, are taken as
                 interchangeable and therefore as referring to same.
+            </p>
+
         </p>
     </div>
-        
+
 
 
     </div>

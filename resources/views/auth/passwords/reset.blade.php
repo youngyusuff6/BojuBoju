@@ -1,6 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+<div
+
+style="
+    background-image: url('vendor/images/backgroundcolor.jpg');
+    background-position: center;
+    background-attachment:scroll;
+    background-size:cover;
+    background-repeat:no-repeat;
+">
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -61,5 +71,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
