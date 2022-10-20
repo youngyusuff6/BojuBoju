@@ -14,9 +14,10 @@ use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 |
 */
 
+
 Route::get('/', function () {
     return view('index');
-});
+})->name('/');
 
 //FOOTER ROUTES
 Route::get('/termsAndConditions', [App\Http\Controllers\FooterController::class, 'terms'])->name('terms');
@@ -27,12 +28,20 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/dashboard',[MessagesController::class, 'dashboard']);
 
 Route::group(['middleware' => 'auth'], function() {
+    Route::get('/changeEmail',[App\Http\Controllers\HomeController::class, 'showChangeUsernameGet'])->name('showChangeUsernameGet');
+    Route::post('/changeEmail',[App\Http\Controllers\HomeController::class, 'showChangeUsernamePost'])->name('showChangeUsernamePost');
     Route::get('/changePassword',[App\Http\Controllers\HomeController::class, 'showChangePasswordGet'])->name('changePasswordGet');
     Route::post('/changePassword',[App\Http\Controllers\HomeController::class, 'changePasswordPost'])->name('changePasswordPost');
 });
 
 Auth::routes();
-Route::resource('messages', 'App\Http\Controllers\MessagesController');
-Route::get('/settings',[App\Http\Controllers\MessagesController::class, 'getSettings']);
+//ROUTE TO OPEN MESSAGE IN NEW TAB
+//Route::get('/share/{id}',[App\Http\Controllers\MessagesController::class, 'getMessages'])->name('getMessages');
+//Route::resource('messages', 'App\Http\Controllers\MessagesController');
+Route::post('/sendMessage',[App\Http\Controllers\MessagesController::class, 'store'])->name('sendmessage');
+Route::post('/deleteUser',[App\Http\Controllers\MessagesController::class, 'delete'])->name('deleteUser');
+Route::get('/dashboard',[App\Http\Controllers\MessagesController::class, 'index'])->name('dashboard');
+Route::get('/myMessages',[App\Http\Controllers\MessagesController::class, 'show'])->name('myMessages');
+Route::get('/settings',[App\Http\Controllers\MessagesController::class, 'getSettings'])->name('changeSettings');
 Route::get('/{username}',[App\Http\Controllers\MessagesController::class, 'display']);
 

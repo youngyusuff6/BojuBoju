@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\User;
-
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -28,7 +28,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return route('/');
     }
 
     public function showChangePasswordGet() {
@@ -57,5 +57,28 @@ class HomeController extends Controller
         $user->save();
 
         return redirect()->back()->with("success","Password successfully changed!");
+    }
+
+
+    //Change username logic
+
+    public function showChangeUsernameGet() {
+        $username = Auth::user()->email;
+        return view('settings.changeUser')->with('username',$username);
+    }
+
+    
+    public function showChangeUsernamePost(Request $request){
+        $user_id = Auth::user()->id;
+        
+        $validate = $request->validate([
+            'email' => 'required|string|email|max:255|unique:users'
+        ]);
+        $update_record = User::where('id', $user_id)->update([
+            'email' => $request->input('email')
+        ]);
+
+        Toastr::success('Email Address Changed Successfully!', 'Done!');
+        return redirect()->route('changeSettings');
     }
 }

@@ -19,9 +19,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
+    <!-- Styles -->   
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/css/app.css')}}" rel="stylesheet">
+    <style>
+      .toast-info {
+        background-color: #2f96b4;
+      }
+      .toast-success {
+        background-color: #198754;
+      }
+      .toast-warning {
+        background-color: #ffc107;
+      }
+      .toast-error {
+        background-color: #dc3545;
+      }
+     </style>
     @yield('styles')
 
 
@@ -98,8 +113,8 @@ style="
 </button>
   <ul class="dropdown-menu dropdown-menu-end border-0 dropdown-menu-lg-start">
 
-  <li>        <a href="/messages" class="dropdown-item">Dashboard</a>    </li>
-    <li>   <a href="/settings" class="dropdown-item">Profile Settings</a>
+  <li>        <a href="{{route('dashboard')}}" class="dropdown-item">Dashboard</a>    </li>
+    <li>   <a href="{{route('changeSettings')}}" class="dropdown-item">Profile Settings</a>
                                   </li>
     <li> <a class="dropdown-item" href="{{ route('logout') }}"
              onclick="event.preventDefault();
@@ -195,6 +210,9 @@ style="
 
         <p class="text-center">© @php echo date('Y')@endphp BojuBoju | Anonymous Messages. <br> All Rights Reserved.</p>
     </footer>
-    @yield('scripts')
+    @yield('scripts')<!-- Toast js Library -->
+    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+        {!! Toastr::message() !!}
 </body>
 </html>

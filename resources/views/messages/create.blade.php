@@ -47,7 +47,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
         <div class="text-center message-header fw-2 mx-3"
           style="color:aliceblue ;"><h3 class="lead display-5">Send A Secret Message..</h3></div>
         <div>
-            <form action='/messages' method="post" enctype="multipart/form-data">
+            <form action='{{route('sendmessage')}}' method="post" enctype="multipart/form-data">
                 @csrf
 
                 <input
@@ -91,7 +91,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse bg-transparent collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
-      <input type="file" placeholder="Add Image" name="image">
+      <input type="file" placeholder="Add Image" name="image" class="text-white">
 
 
     </div>
