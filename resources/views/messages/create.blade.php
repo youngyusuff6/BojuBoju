@@ -70,7 +70,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
                 type="text" id="counterBox"/>
 
 
-                <label style="color:silver;" for="my-input">Send a message to $username here</label>
+                <label style="color:silver;" for="my-input">Send a message to <span></span>  here</label>
                    @error('message')
                     <span class="text-danger">
                         <small>{{ $message }}</small>
