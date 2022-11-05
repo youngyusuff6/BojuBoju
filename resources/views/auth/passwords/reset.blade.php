@@ -9,6 +9,7 @@ style="
     background-attachment:scroll;
     background-size:cover;
     background-repeat:no-repeat;
+    background-color:aqua;
 ">
 
 <div class="container">

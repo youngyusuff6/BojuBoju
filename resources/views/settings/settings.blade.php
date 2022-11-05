@@ -55,7 +55,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
 
 
 
-         <!-- 1st Modal -->
+         <!--confirm Modal -->
          <div class="modal   fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered   bg-transparent modal-sm">
     <div class="modal-content   confirm-delete ">
