@@ -5,10 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class MessagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['store', 'display']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -51,10 +57,7 @@ class MessagesController extends Controller
      */
        public function store(Request $request){
         $username = $request->input('username');
-        $userid = User::where('users.username','=', $username)->get('users.id');
-        foreach ($userid as $userid) {
-            $user_id = $userid->id;
-        }
+        $user_id = User::where('users.username','=', $username)->value('users.id');
         $message = new Message();
 
         $this->validate($request,[
@@ -63,7 +66,7 @@ class MessagesController extends Controller
         ]);
 
         if($request->hasFile('image')){
-            $path = $request->file('image')->store('images','public');
+            $path = $request->file('image')->store('images/'.$user_id,'public');
         }else{
             $path = NULL;
         }
@@ -90,7 +93,8 @@ class MessagesController extends Controller
         $message->user_id = $user_id;
         $message->save();
 
-        return back()->with('message', 'Message Sent Successfully. Now it`s your turn to write');       
+        Toastr::success('Message Sent Successfully. Now it`s your turn to write!','Message Sent!');      
+        return back();
     }
 
     /**
@@ -99,26 +103,22 @@ class MessagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //  $username = auth()->user()->user_id;
-        // $user = User::find($username);
+    
         $messages = Message::where('username', Auth::user()->username)->latest()->paginate(5);
         return view('messages.MyMessages')->with('messages', $messages);
     }
     
     public function display($username){
                 $username = User::whereUsername($username)->firstOrFail();
-                return view('messages.create')->with('username', $username);        
+                return view('messages.create')->with('username', $username);    
+            
     }
 
     public function getSettings(){
         return view('settings.settings');
     }
-
-
-
-
 
 
     /**
@@ -127,9 +127,18 @@ class MessagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function delete()
     {
-        //
+        $user_id =  Auth::id();
+        $path = public_path('/storage/'.'/images/'.$user_id);
+       
+        if(File::exists($path)){
+               File::deleteDirectory($path);
+            }
+        $user = User::where('id','=', $user_id)->delete();
+
+        return redirect()->route('home')->with('message', 'deleted');
+       
     }
 
     /**
@@ -152,7 +161,7 @@ class MessagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 
 }

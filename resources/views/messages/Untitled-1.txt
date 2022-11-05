@@ -1,0 +1,65 @@
+@extends('layouts.app')
+@section('title') Message  @endsection
+{{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
+@section('styles')
+<link rel="stylesheet" href="{{url('vendor/css/mymessages.css')}}">
+@endsection
+@section('scripts')
+<script src="{{asset('vendor/js/html2canvas.js')}}"></script>
+    <script>
+        function capture(){
+            window.scrollTo(0,0);
+
+            html2canvas(document.getElementById('canvaImage')).then(function (canvas){
+                console.log(canvas.toDataURL('image/jpeg',0.9));
+            })
+        }
+    </script>
+@endsection
+@section('content')
+    @foreach ($message as $message)
+
+    <div class="container text-center" id="canvaImage">
+        <div class="card message-box   ms-auto me-auto mt-5 rounded border-2" style="max-width: 20rem;">
+            <div class="card-header fs-5 text-start">Message:</div>
+            <div class="card-body">
+              <p class="card-text">{{$message->message}}</p>
+    
+              @if ($message->image)
+     <div class="accordion col-11 ms-4 mt-1 bg-transparent"  id="accordionPanelsStayOpenExample">
+      <div class="accordion-item border-0  bg-transparent">
+        <h2 class="accordion-header  border-0 step-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button bg-transparent collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{"_".$message->id}}" aria-expanded="true" aria-controls="collapseOne">
+            Image
+          </button>
+        </h2>
+          <div id="collapseOne{{"_".$message->id}}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
+        <div class="accordion-body border-0 image-dropdown">
+              <div class="card border-0 image-dropdown">
+                    <a href="{{asset('storage/'.$message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset('storage/'.$message->image)}}" alt="message_img" style="width:100%"></a>
+                      <div class="card-body">
+                      </div>
+                  </div>
+        </div>
+      </div>
+    </div>
+    
+                @else
+                <p>
+                {{-- -No images attached --}}
+              </p>
+              @endif
+    
+    
+                    <p class="mt-1 mb-1">-BojuBoju [@ {{$message->created_at}}]</p>
+                    <div class="card-footer message-box bg-transparent">
+                  <a href="#" onclick="capture();" class="btn rounded mt-2 border-0  w-100 rounded-pill">Share response</a>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+    
+    @endforeach
+
+@endsection
