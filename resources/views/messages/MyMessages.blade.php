@@ -46,11 +46,11 @@
 @endsection
 @section('content')
 
-<div class="body" >
+<div class="body pb-5" >
 
 
 
-<div class="col-12">
+<div class="col-12 pb-5">
 
 
 
@@ -104,7 +104,7 @@
 
 @endforeach
 @else
-<div class="container text-center">
+<div class="container mt-5 pt-5 text-center">
     <div class="card bg-light mb-3  ms-auto me-auto mt-2 rounded border-dark" style="max-width: 18rem;">
         <div class="card-header message-box rounded border-2 text-light" style="max-width: 20rem;">No recent messages</div>
       </div>

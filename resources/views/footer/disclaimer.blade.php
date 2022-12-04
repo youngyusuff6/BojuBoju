@@ -23,7 +23,7 @@
          </h3>
 
              <p class="paragraph">
-                All the information on this website - bojuboju.com - is published in good faith and
+                All the information on this website - BojuBoju.webhostingfree.io. - is published in good faith and
                 for general information purpose only. bojuboju does not make any warranties about
                 the completeness, reliability and accuracy of this information. Any action you take
                 upon the information you find on this website (bojuboju ), is strictly at your own
@@ -51,10 +51,10 @@
             Should we update, amend or make any changes to this document, those changes
 
             will be prominently posted here
-           
+
 
             If you require any more information or have any questions about our site's
-            disclaimer, please feel free to contact us by email at bojuboju@gmail.com.
+            disclaimer, please feel free to contact us by email at bojubojuanonymous@gmail.com.
 
 
 

@@ -60,7 +60,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
                 <textarea
                 style="background-color:transparent; color:aliceblue;min-height:100px;"
                      name='message'
-                    class="form-control  message-box border-0"
+                    class="form-control mb-3 message-box border-0"
                     placeholder="Send your message here"
                     rows="10"
                     name="my-name"  id="txtBox"
@@ -70,7 +70,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
                 type="text" id="counterBox"/>
 
 
-                <label style="color:silver;" for="my-input">Send a message to <span></span>  here</label>
+                <label style="color:silver;" for="my-input">Send a message to <span>{{ Auth::user()->username }}</span>  here.......</label>
                    @error('message')
                     <span class="text-danger">
                         <small>{{ $message }}</small>

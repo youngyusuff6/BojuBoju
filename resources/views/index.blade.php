@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="body">
-    <div style="width:100%;  " class="card-body rounded  ms-auto me-auto">
+    <div style="width:100%;  " class=" rounded  ms-auto me-auto">
 
 
         <!-- page header  -->
@@ -182,8 +182,7 @@
 
             <li>
               <i class="fa fa-phone"></i>
-              <a href="tel:08510004495"><b>+2348089800377</b></a>,
-              <a href="tel:08510005495"><b>0251600XXXX</b></a>
+              <a href="tel:+2348089800377"><b>+2348089800377</b></a>
             </li>
 
             <li>

@@ -25,7 +25,7 @@
          </h5>
              <p class="paragraph">
              These terms and conditions outline the rules and regulations for the use of
-                BojuBoju's Website, located at BojuBoju.xyz.
+                BojuBoju's Website, located at BojuBoju.webhostingfree.io..
                 <p>
                 By accessing this website we assume you accept these terms and conditions. Do
                  not continue to use BojuBoju if you do not agree to take all of the terms and

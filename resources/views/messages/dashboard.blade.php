@@ -9,7 +9,7 @@
       position: relative;
       display: inline-block;
     }
-    
+
     .tooltip .tooltiptext {
       visibility: hidden;
       width: 140px;
@@ -26,7 +26,7 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-    
+
     .tooltip .tooltiptext::after {
       content: "";
       position: absolute;
@@ -37,7 +37,7 @@
       border-style: solid;
       border-color: #555 transparent transparent transparent;
     }
-    
+
     .tooltip:hover .tooltiptext {
       visibility: visible;
       opacity: 1;
@@ -55,15 +55,15 @@
     <div class="card-header d-flex bg-transparent ">
       <div>
          <h1 class="lead   bg-transparent">Good {{$timeOfTheDay}}, <span class="username ">{{$username}}</span></h1>
-      </div> 
-        
+      </div>
+
         {{-- <div class="tooltip">
           <button onclick="myFunction()" >
             <span class="tooltiptext btn btn-info" id="myTooltip">Copy to clipboard</span>
             Profile Link
             </button>
           </div> --}}
-        <a href="#" onclick="copyText()" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
+        <a href="http://127.0.0.1:8000/ {{ Auth::user()->username }}" onclick="copyText()" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
           <span class="tooltiptext" id="myTooltip"></span>
         Profile Link</a>
       </div>

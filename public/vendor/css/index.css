@@ -214,11 +214,12 @@ input {
 
 .section-title {
   position: relative;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
+  padding-left: 50px;
   font-family: "Poppins", sans-serif;
   margin: 0 0 35px;
-  color: #f93;
+  color:burlywood;
 }
 
 .sec-pad {
@@ -234,7 +235,7 @@ input {
 
 .contact-sec .contact-ul li,
 .contact-ul b {
-  font-size: 20px;
+  font-size: 15px;
   margin: 10px 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   word-wrap: break-word;
@@ -340,7 +341,7 @@ form.contFrm {
     font-weight: 900;
     color:#b298dc;
     background-image: url('../images/backgroundcolor.jpg');
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 

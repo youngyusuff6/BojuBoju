@@ -23,7 +23,7 @@
          </h3>
 
              <p class="paragraph">
-            At BojuBoju, accessible from Bojuboju.net, one of our main priorities is the privacy
+            At BojuBoju, accessible from BojuBoju.webhostingfree.io., one of our main priorities is the privacy
             of our visitors. This Privacy Policy document contains types of information that is
             collected and recorded by BojuBoju and how we use it.
              </p>
