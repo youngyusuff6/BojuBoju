@@ -173,6 +173,7 @@
          background-image: url('../images/backgroundcolor.jpg');
             background-repeat: no-repeat;
               background-size: cover; color:  purple;
+              border-radius: 5px;
          }
 
 

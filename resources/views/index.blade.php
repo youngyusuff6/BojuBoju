@@ -6,9 +6,8 @@
 @endsection
 @section('content')
 
-<div class="body" >
-    <div  style="width:100%; " class="card rounded border-0 bg-transparent ms-auto me-auto">
-        <div style="width:100%; " class="card-body mt-3 rounded  ms-auto me-auto">
+<div class="body">
+    <div style="width:100%;  " class="card-body rounded  ms-auto me-auto">
 
 
         <!-- page header  -->
@@ -69,7 +68,7 @@
   <path fill-rule="evenodd" d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566ZM9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z"/>
 </svg>
       <p class="card-text">We are always working on BojuBoju as a platform so you can experience a friendly user experience. fill in your username and password to get started.
-        <a href="#accordionPanelsStayOpenExample">Click here</a>  to view the easy steps  </p>
+        <a class="text-warning" href="#accordionPanelsStayOpenExample">Click here</a>  to view the easy steps  </p>
 
     </div>
   </div>
@@ -133,20 +132,26 @@
 
 
 
-  <div class="text-center margins">
-            <h1 class="mt-5  pt-5">About <b>BojuBoju</b> </h1>
+  <div class="text-center  margins">
+            <h1 class="mt-5  pt-5">About <b>BojuBoju</b>
+        </h1>
 
+ <div class="card mt-5 bg-transparent about-card border-0" style="max-width: 100%;">
+    <div class="row about-container g-0">
+        <div class="col about-text-container">
+        <div class="card-body about-body">
+            <p class="card-text"> BojuBoju is an interactive anonymous messaging <br/> created  december 2022.
+                Built with laravel by contributing developers. <br/>
+                With BojuBoju, you can send and receive  <br/>anonymous messages from anyone for free!
+            </p>
+        </div>
+        </div>
+        <div class="col about-image">
+        <img src="vendor/images/Hiddenperson-cuate.svg" class="img-fluid rounded-start" alt="...">
+        </div>
+    </div>
   </div>
-
-
-
-
-
-
-
-
-
-
+  </div>
 
 
 
@@ -154,6 +159,85 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-sec sec-pad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="contact-detail">
+          <h1 class="section-title">Contact us</h1>
+
+          <ul class="contact-ul">
+
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:08510004495"><b>+2348089800377</b></a>,
+              <a href="tel:08510005495"><b>0251600XXXX</b></a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:pardeepkumar4bjp@gmail.com"><b> bojubojuanonymous@gmail.com</b></a>
+            </li>
+          </ul>
+
+          <span>
+            <a href="#" class="fb"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+      <h1 class="section-title">Get in Touch</h1>
+        <form action="#" class="contFrm" method="POST">
+          <div class="row">
+            <div class="col-sm-6">
+              <input type="text" name="name" placeholder="Your Name" class="form-control" required />
+            </div>
+
+            <div class="col-sm-6">
+              <input type="email" name="email" placeholder="Email Address" class="form-control" required />
+            </div>
+
+            <div class="col-sm-6">
+              <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required />
+            </div>
+
+            <div class="col-sm-6">
+              <input type="text" name="sub" placeholder="Subject" class="form-control" required />
+            </div>
+
+            <div class="col-12">
+              <textarea class="form-control" rows="" cols="" placeholder="Your Message..." required></textarea>
+            </div>
+
+            <div class="col-12">
+              <input type="submit" name="submit" value="SUBMIT" class="inptBtn" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+
 
 </body>
 

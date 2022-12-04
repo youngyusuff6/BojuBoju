@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 
 
 .body{
@@ -19,7 +21,9 @@ b{
     font-size: 50px;
     font-family: 'Roboto Slab', serif;
 
-} @media only screen and (max-width:345px){  h1{ font-size: 29px; } .headers-paragraph{  width: 95%; }}
+}
+@media only screen and (max-width:705px){  h1{ font-size: 35px; } .headers-paragraph{  width: 100%; }}
+@media only screen and (max-width:345px){  h1{ font-size: 29px; } .headers-paragraph{  width: 100%; }}
 
 .intro-header{
     width: 100%;
@@ -36,7 +40,8 @@ b{
     font-weight: 900;
     color: aliceblue;
     background-image: url('../images/backgroundcolor.jpg');
-    background-repeat: no-repeat;
+background-repeat: no-repeat;
+
 
 }
 p{
@@ -100,6 +105,13 @@ color: aliceblue;
  overflow: auto;
 }
 
+.why-cards-body a{
+   text-decoration:none;
+   }
+
+
+
+
 .step-header button{
     font-weight: 900;
     color: purple;
@@ -135,3 +147,326 @@ color: purple;
 
 }
 
+
+.about-card{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+
+@media only screen and (max-width:670px){
+
+.about-container{
+display: flex;
+flex-direction: column-reverse;
+}
+
+.about-body p{
+    margin-top: 0%;
+    text-align:center;
+}
+
+}
+
+
+
+.about-image img{
+width: 70%;
+}
+
+.about-image img{
+   width: 100%;
+   height: 100%;
+
+}
+
+
+.about-text-container{
+    width: 100%;
+    height: 100%;
+}
+
+
+.about-body{
+    font-size: 18px;
+    margin-top: 20%;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+ul {
+  list-style: none;
+}
+
+input {
+  overflow: hidden;
+}
+
+.section-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 35px;
+  color: #f93;
+}
+
+.sec-pad {
+  padding: 60px 0 0;
+  margin: 50px 0;
+}
+
+.contact-sec {
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+}
+
+.contact-sec .contact-ul li,
+.contact-ul b {
+  font-size: 20px;
+  margin: 10px 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  word-wrap: break-word;
+}
+
+.contact-sec .contact-ul i {
+  font-size: 18px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.contact-detail a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-sec .contact-ul li b:hover {
+  color: #f93;
+}
+
+.contact-sec .contact-ul li .fa-location-dot {
+  color: #f44337;
+  border: 2px solid #f4433790;
+}
+
+.contact-sec .contact-ul li .fa-phone {
+  color: #00b055;
+  border: 2px solid #00b05590;
+}
+
+.contact-sec .contact-ul li .fa-envelope {
+  color: #ff6347;
+  border: 2px solid #ff634790;
+}
+
+.contact-detail span {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+.contact-detail span a {
+  font-size: 20px;
+  padding: 6px 12px;
+  color: #000;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+.contact-detail span .fb {
+  color: #3b5998;
+  border: 3px solid #3b5998;
+}
+.contact-detail span .fb:hover {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.contact-detail span .insta {
+  color: #833ab4;
+  border: 3px solid #833ab4;
+}
+.contact-detail span .insta:hover {
+  color: #fff;
+  background-color: #833ab4;
+}
+
+.contact-detail span .twitter {
+  color: #00acee;
+  border: 3px solid #00acee;
+}
+.contact-detail span .twitter:hover {
+  color: #fff;
+  background-color: #00acee;
+}
+
+form.contFrm {
+  max-width: 396px;
+  margin: auto;
+}
+
+
+.inptFld:focus {
+  outline-offset: -4px;
+  outline: 1px solid #f93;
+}
+
+.contFrm textarea {
+  height: 75px;
+  padding-top: 5px;
+}
+.inptBtn {
+  height: 30px;
+  border: 0;
+  font-size: 14px;
+  color: #fff;
+  margin: auto;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 100px;
+}
+
+.inptBtn{
+    font-weight: 900;
+    color:#b298dc;
+    background-image: url('../images/backgroundcolor.jpg');
+background-repeat: no-repeat;
+}
+
+
+
+.inptBtn:hover{
+  color: aliceblue;
+    background-image: url('../images/backgroundcolor.jpg');
+  background-repeat:repeat;
+  background-size: cover;
+}
+
+.inptBtn:active{
+   margin-top: 5px;
+   background-color: #9f7bdb;
+
+}
+
+/* Responcive css Start */
+
+@media (max-width: 991px) {
+  .sec-pad {
+    padding: 20px 0 0px;
+  }
+
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size: 18px;
+  }
+
+  .contact-sec .contact-ul i {
+    font-size: 14px;
+    padding: 6px;
+    margin-right: 6px;
+  }
+
+  .inptFld {
+    height: 40px;
+    margin: 0 0 10px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-detail span {
+    width: auto;
+  }
+  .contact-detail span a {
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 50%;
+    margin: 0px 5px 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .contact-sec {
+    border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
+  }
+
+  .contact-sec .contact-ul i {
+    border: none;
+  }
+  .inptFld {
+    height: 36px;
+    margin: 0 0 8px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size: 16px;
+  }
+}
+
+
+
+   /* input background color */
+   .form-control{
+    border-bottom-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-width: 2px;
+    border-bottom-color: #b298dc;
+    background-color:transparent;
+  margin-bottom: 15px;}
+
+  .form-control::placeholder{
+    color: gainsboro;
+  }
+
+
+    .form-control:focus{
+        background-color: transparent;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-width: 3px;
+        border-bottom-color: #b298dc;
+    }
+
+    /* input background color when entering values */
+    .form-control:active{
+        border-top: none;
+        border-bottom-color:#b298dc ;
+        border-bottom-width: 3px;
+      }
+
+    /* input background color on hover */
+
+        .form-control:hover{
+            background-color:transparent;
+            border-style: solid;
+            border-top:none;
+            border-left:none;
+            border-right:none;
+            border-bottom-color: #b298dc;
+            border-bottom-width: 4px;
+            }

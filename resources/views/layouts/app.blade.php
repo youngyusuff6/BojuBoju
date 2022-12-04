@@ -19,10 +19,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Styles -->   
+    <!-- Styles -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/css/app.css')}}" rel="stylesheet">
+
+    <!-- bootstrap icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <style>
       .toast-info {
         background-color: #2f96b4;
@@ -118,7 +121,7 @@ style="
                                   </li>
     <li> <a class="dropdown-item" href="{{ route('logout') }}"
              onclick="event.preventDefault();
-          document.getElementById('logout-form').submit();">
+             document.getElementById('logout-form').submit();">
           {{ __('Logout') }}
              </a> </li>
 
@@ -158,7 +161,7 @@ style="
             @yield('content')
         </main>
     </div>
-    <footer style="position:relative ;" class='mt-5'>
+    <footer style="position:relative ;" class=''>
          <hr>
 <!--
 <div class="contact-us">
@@ -208,11 +211,13 @@ style="
 
 
 
-        <p class="text-center">© @php echo date('Y')@endphp BojuBoju | Anonymous Messages. <br> All Rights Reserved.</p>
+        <p class="text-center"> &copy; @php echo date('Y')@endphp BojuBoju | Anonymous Messages.  <br> All Rights Reserved.</p>
     </footer>
     @yield('scripts')<!-- Toast js Library -->
     <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         {!! Toastr::message() !!}
 </body>
 </html>

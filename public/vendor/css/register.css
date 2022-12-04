@@ -132,8 +132,9 @@
       .register-button{
         font-weight:800;
        background-image: url('../images/backgroundcolor.jpg');
-           background-repeat: no-repeat;
+           background-repeat: repeat;
              background-size: cover; color:  purple;
+             border-radius: 5px;
 
       }
 
@@ -142,7 +143,7 @@
        .register-button:hover {
         color: aliceblue;
         background-image: url('../images/backgroundcolor.jpg');
-        background-repeat:repeat;
+        background-repeat:no-repeat;
 
         }
 
@@ -180,6 +181,7 @@
         border-bottom-right-radius: 120px;
         border-top-right-radius: 120px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        overflow: hidden;
 
       }
 

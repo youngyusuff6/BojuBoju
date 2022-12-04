@@ -107,53 +107,6 @@ margin-left: 5%;
 
 
 
-    .contact-us{
-        position:absolute;
-        right: 13%;
-        top: 17%;
-    }
-
-    .contact-us h5{
- color: #b298dc;
-  }
-
-  .contact-us svg{
-    color: aliceblue;
-     }
-
-
-  .contact-us svg :hover{
-    color:purple;
-     }
-
-
-
-     .contact-us2{
-        position:absolute;
-        right: 2%;
-        top: 18%;
-    }
-
-    .contact-us2 h5{
- color: #b298dc;
-  }
-
-  .contact-us2 svg{
-    color: aliceblue;
-     }
-
-
-  .contact-us2 svg :hover{
-    color:purple;
-     }
-
-     .contact-us2 b{
-        color: purple;
-     }
-
-
-
-
      @media only screen and (max-width:400px){
 
    .drop-profile{
