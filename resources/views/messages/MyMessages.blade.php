@@ -79,7 +79,7 @@
       <div id="collapseOne{{"_".$message->id}}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
     <div class="accordion-body border-0 image-dropdown">
           <div class="card border-0 image-dropdown">
-                <a href="{{asset('storage/'.$message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset('storage/'.$message->image)}}" alt="message_img" style="width:100%"></a>
+                <a href="{{asset($message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset($message->image)}}" alt="message_img" style="width:100%"></a>
                   <div class="card-body">
                   </div>
               </div>
@@ -95,8 +95,27 @@
 
 
                 <p class="mt-1 mb-1">-BojuBoju [@ {{$message->created_at}}]</p>
-                <div class="card-footer message-box bg-transparent">
-              <a href="#" class="btn rounded mt-2 border-0  w-100 rounded-pill report"><i class="fa fa-flag m-r-25"></i> Report/Spam</a>
+
+            <div class="card-footer message-box bg-transparent ">
+              {{-- <span>
+                 <form action="{{ route('postReaction',1) }}" method="POST">
+                @csrf
+                      <input type="checkbox" class="btn-check" id="btn1" autocomplete="off" onchange="this.form.submit();" name="like" value="{{$message->id}}" >
+                      <label for="btn1"  class="btn rounded btn-success w-25 mt-2 border-0 rounded-pill report">👍🏾   {{$message->id}}</label>
+                  </div>
+              </form> 
+              </span>
+             <span>
+                <form action="{{ route('postReaction',2) }}" method="POST">
+                @csrf
+                      <input type="checkbox" class="btn-check" id="btn2" autocomplete="off" onchange="this.form.submit();" name="unlike" value="unlike" >
+                      <label for="btn2"  class="btn rounded btn-danger w-25 border-0 rounded-pill report">👎🏾   {{$message->id}}</label>
+                  </div>
+              </form> 
+             </span> --}}
+            
+              <a href="" class="btn rounded mt-2 border-0 rounded-pill report"><i class="fa fa-flag m-r-25"></i>👍🏾</a>
+              <a href="#" class="btn rounded mt-2 border-0 rounded-pill report"><i class="fa fa-flag m-r-25"></i>👎🏾</a>
           </div>
         </div>
       </div>
@@ -109,11 +128,15 @@
         <div class="card-header message-box rounded border-2 text-light" style="max-width: 20rem;">No recent messages</div>
       </div>
 @endif
+@if (count($messages) > 0)
+<p class="text-center text-light"><small >PS:Messages are automatically deleted after 30days</small></p>
+@endif
 <div class="pagination justify-content-center bg-transparent mt-3">
     {{$messages->links('components.pagination')}}
 </div>
 
 
-</div></div></div>
+</div></div>
 
+</div>
 @endsection

@@ -975,5 +975,17 @@
 
 
 
-
+    function FILE_DELETERS($filename){
+        /* check if the file real path is writable and if its exist and actually points to a file. */
+        IF( (is_writable ($filename)) && (file_exists($filename)) ){
+            /* control in here signifies that the file real path is writable and points to a file, therefore we delete the file the path is pointing to.  */
+            @unlink ($filename);
+            /* we return true indicating to subsequent functions that delete operations was a success. */
+            return TRUE;
+        }ELSE{
+            /* control in here signifies that the file real path is not writable and does not point to a file, therefore we return true indicating to subsequent functions 
+            * that delete operations failed. */
+            return TRUE;
+        }
+    }
 

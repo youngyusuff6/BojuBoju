@@ -64,13 +64,13 @@ style=" background-image: url('vendor/images/background-eye.gif');
                     placeholder="Send your message here"
                     rows="10"
                     name="my-name"  id="txtBox"
-                    maxlength="300" minlength="8">{{@old('message')}}</textarea>
+                    maxlength="300" minlength="4">{{@old('message')}}</textarea>
 
                 <input class="word-count border-0" readonly
                 type="text" id="counterBox"/>
 
 
-                <label style="color:silver;" for="my-input">Send a message to <span>{{ Auth::user()->username }}</span>  here.......</label>
+                <label style="color:silver;" for="my-input">Send a message to {{$username['username']}} here</label>
                    @error('message')
                     <span class="text-danger">
                         <small>{{ $message }}</small>
