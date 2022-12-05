@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/termsAndConditions', [App\Http\Controllers\FooterController::class, 'terms'])->name('terms');
 Route::get('/disclaimer', [App\Http\Controllers\FooterController::class, 'disclaimer'])->name('disclaimer');
 Route::get('/privacy-policy', [App\Http\Controllers\FooterController::class, 'privacy'])->name('privacy');
+//ADMINISTRATION
+Route::get('/a/d/m/i/n', [App\Http\Controllers\FooterController::class, 'admin'])->name('admin');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/dashboard',[MessagesController::class, 'dashboard']);
@@ -38,6 +41,8 @@ Auth::routes();
 //ROUTE TO OPEN MESSAGE IN NEW TAB
 //Route::get('/share/{id}',[App\Http\Controllers\MessagesController::class, 'getMessages'])->name('getMessages');
 //Route::resource('messages', 'App\Http\Controllers\MessagesController');
+Route::post('/12345/{id}',[App\Http\Controllers\FooterController::class, 'postReaction'])->name('postReaction');
+
 Route::post('/sendMessage',[App\Http\Controllers\MessagesController::class, 'store'])->name('sendmessage');
 Route::post('/deleteUser',[App\Http\Controllers\MessagesController::class, 'delete'])->name('deleteUser');
 Route::get('/dashboard',[App\Http\Controllers\MessagesController::class, 'index'])->name('dashboard');
