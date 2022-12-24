@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
@@ -19,12 +20,15 @@ Route::get('/', function () {
     return view('index');
 })->name('/');
 
+//CONTROLLER TO CONTACT-US
+Route::post('/contact-us',[App\Http\Controllers\ContactUsController::class, 'contact'])->name('contact-us');
+
 //FOOTER ROUTES
 Route::get('/termsAndConditions', [App\Http\Controllers\FooterController::class, 'terms'])->name('terms');
 Route::get('/disclaimer', [App\Http\Controllers\FooterController::class, 'disclaimer'])->name('disclaimer');
 Route::get('/privacy-policy', [App\Http\Controllers\FooterController::class, 'privacy'])->name('privacy');
 //ADMINISTRATION
-Route::get('/a/d/m/i/n', [App\Http\Controllers\FooterController::class, 'admin'])->name('admin');
+Route::get('/admin/bojuboju/a/d/m/i/n', [AdminController::class, 'index'])->name('admin');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -37,11 +41,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/changePassword',[App\Http\Controllers\HomeController::class, 'changePasswordPost'])->name('changePasswordPost');
 });
 
+
+
+
 Auth::routes();
-//ROUTE TO OPEN MESSAGE IN NEW TAB
-//Route::get('/share/{id}',[App\Http\Controllers\MessagesController::class, 'getMessages'])->name('getMessages');
-//Route::resource('messages', 'App\Http\Controllers\MessagesController');
-Route::post('/12345/{id}',[App\Http\Controllers\FooterController::class, 'postReaction'])->name('postReaction');
 
 Route::post('/sendMessage',[App\Http\Controllers\MessagesController::class, 'store'])->name('sendmessage');
 Route::post('/deleteUser',[App\Http\Controllers\MessagesController::class, 'delete'])->name('deleteUser');
@@ -49,4 +52,3 @@ Route::get('/dashboard',[App\Http\Controllers\MessagesController::class, 'index'
 Route::get('/myMessages',[App\Http\Controllers\MessagesController::class, 'show'])->name('myMessages');
 Route::get('/settings',[App\Http\Controllers\MessagesController::class, 'getSettings'])->name('changeSettings');
 Route::get('/{username}',[App\Http\Controllers\MessagesController::class, 'display']);
-

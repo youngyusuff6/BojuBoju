@@ -45,7 +45,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
     </p>
     <div class="container  border-0 rounded ms-auto me-auto">
         <div class="text-center message-header fw-2 mx-3"
-          style="color:aliceblue ;"><h3 class="lead display-5">Send A Secret Message..</h3></div>
+          style="color:aliceblue ;"><h3 class="lead display-5">Send a secret message to {{$username['username']}}..</h3></div>
         <div>
             <form action='{{route('sendmessage')}}' method="post" enctype="multipart/form-data">
                 @csrf

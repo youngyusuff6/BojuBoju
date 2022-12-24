@@ -63,7 +63,7 @@
             Profile Link
             </button>
           </div> --}}
-        <a href="" onclick="copyText()" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
+        <a href="#" onclick="copyText()" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
           <span class="tooltiptext" id="myTooltip"></span>
         Profile Link</a>
       </div>
