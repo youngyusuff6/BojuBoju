@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'BojuBoju'),
 
     /*
     |--------------------------------------------------------------------------
@@ -232,4 +232,15 @@ return [
 
     ],
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | COMPANY DATAS
+    |--------------------------------------------------------------------------
+    |
+    */
+    'meta_keywords' => 'anonymous, friends, messaging, unknown, bojuboju, free-friends',
+    'meta_title' => 'BojuBoju is an interactive anonymous messaging app with an interesting dare game',
+    'meta_description' => "With BojuBoju, you can send and receive anonymous messages from anyone for free!",
+  
 ];

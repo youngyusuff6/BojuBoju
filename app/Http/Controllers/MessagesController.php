@@ -27,11 +27,11 @@ class MessagesController extends Controller
         $timeOfTheDay = '';
         $hour = date('H');
         if($hour >= 00 && $hour <=11){
-            $timeOfTheDay = 'Morning';
+            $timeOfTheDay = 'morning';
         }elseif($hour >= 12 && $hour <=17){
-            $timeOfTheDay = 'Afternoon';
+            $timeOfTheDay = 'afternoon';
         }elseif($hour >= 18 && $hour <=23){
-            $timeOfTheDay = 'Evening';
+            $timeOfTheDay = 'evening';
         }
         //Fetch name
         $name = auth()->user()->name;

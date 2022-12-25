@@ -6,6 +6,13 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="keywords" content="{{ Config::get('app.meta_keywords') }}" />
+    <meta name="author" content="{{ Config::get('app.name') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_description') }}" />
+    <meta property="og:title" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_title') }}" />
+    <meta property="og:description" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_description') }}" />
+    <meta property="og:image" content="{{ asset('vendor/images/web-icon.ico')}}" />
 
     <title> {{ Config::get('app.name') }} | @yield('title') </title>
 
