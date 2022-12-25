@@ -1,0 +1,24 @@
+.body{
+    background-image: url('../images/500InternalServerError-pana.png');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    height:97vh;
+    width:97vw;
+}
+
+.error-message{
+    background-color:rgba(215, 143, 216, 0.5);
+    color: aliceblue;
+    position: absolute;
+    top:40%;
+    left:40%;
+    padding: 60px;
+    border-radius: 8px;
+
+}
+
+.error-message button{
+    padding:  10px 50px 10px 50px;
+   }
