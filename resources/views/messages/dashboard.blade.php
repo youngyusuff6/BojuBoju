@@ -63,7 +63,8 @@
             Profile Link
             </button>
           </div> --}}
-        <a href="http://127.0.0.1:8000/ {{ Auth::user()->username }}" onclick="copyText()" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
+        <a href="" onclick="copyText()" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
+
           <span class="tooltiptext" id="myTooltip"></span>
         Profile Link</a>
       </div>
@@ -156,7 +157,7 @@
       /* Copy text into clipboard */
       navigator.clipboard.writeText(username.value);
       alert('Link copied to clipboard');
-          // ("<?php route('/').'$username' ;?>");
+      // ("<?php route('/').'$username' ;?>");
   }
 </script>
 @endsection

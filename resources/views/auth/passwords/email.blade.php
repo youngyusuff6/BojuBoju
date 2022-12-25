@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.reset-layout')
 @section('title') Reset Password @endsection
 
 
@@ -13,7 +13,12 @@
 @section('content')
 
 
-<div class="body">
+<div class="body"
+style=" 
+    background-position: center;
+    background-attachment:scroll;
+    background-size:cover;
+    background-repeat:no-repeat;">
 
 
 
