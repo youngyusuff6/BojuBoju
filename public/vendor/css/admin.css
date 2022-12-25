@@ -1,0 +1,89 @@
+body{
+background-image: url('../images/backgroundcolor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+input{
+    display: none;
+}
+
+label{
+    height: 50px;
+    width:50px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+#display:checked ~ section{
+    display: none;
+     transition-duration:2s ;
+
+}
+
+#display:checked ~ .sub-body{
+    display: block;
+     transition-duration:2s ;
+
+}
+
+.sub-body{
+    display: none;
+     transition-duration:2s ;
+
+}
+
+
+
+.cover{
+    position:static;
+    height: 100vh;
+    width:100vw;
+    background-repeat: no-repeat;
+    background-size: 100vw 120vh;
+    background-image: url('../images/404\ error\ with\ a\ landscape-pana.png');
+
+}
+
+.headers{
+  color: purple;
+  font-size: 40px;
+  font-weight:900;
+}
+
+.dash-cards .card{
+    color: aliceblue;
+    position: relative;
+}
+
+
+
+.contact-table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+th{
+    color: #b298dc;
+}
+
+
+td{
+
+        color: aliceblue;
+        padding: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 50px;
+      }
+
+
+
+.info-modal{
+    background-color: rgba(197, 207, 25, 0.8);
+    max-width: 70%;
+}

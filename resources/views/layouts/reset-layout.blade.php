@@ -42,6 +42,8 @@
      </style>
     @yield('styles')
 
+    
+
 
     <!-- web icon -->
     <link rel = "icon" href ="{{ asset('vendor/images/web-icon.ico')}} "  type = "image/x-icon" height="50px" width="80px">

@@ -179,7 +179,7 @@
           <h1 class="section-title">Contact us</h1>
 
           <ul class="contact-ul">
-{{-- 
+{{--
             <li>
               <i class="fa fa-phone"></i>
               <a href="tel:+2348089800377"><b>+2348089800377</b></a>
@@ -201,7 +201,7 @@
 
       <div class="col-md-6">
       <h1 class="section-title">Get in Touch</h1>
-        <form action="{{route('contact-us')}}" class="contFrm" method="POST">
+     <form action="{{route('contact-us')}}" class="contFrm" method="POST">
           @csrf
           <div class="row">
             <div class="col-sm-6">
