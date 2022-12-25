@@ -13,20 +13,16 @@
 @section('content')
 
 
-<div class="body"
-style=" 
-    background-position: center;
-    background-attachment:scroll;
-    background-size:cover;
-    background-repeat:no-repeat;">
+
+<section class="body ">
 
 
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+        <div class="col-md-8 ">
+            <div class="card  verify-body">
+                <div class="card-header verify-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -54,7 +50,7 @@ style="
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn verify-button">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>
@@ -67,7 +63,7 @@ style="
 </div>
 </div>
 
-</div>
+</section>
 @endsection
 
 {{-- ADD JS HERE OR IMPORT --}}

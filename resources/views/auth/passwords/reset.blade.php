@@ -7,20 +7,12 @@
 
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
 @section('styles')
-    <link rel="stylesheet" href="{{url('vendor/css/login.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/css/reset.css')}}">
 @endsection
 @section('content')
 
 
-<div
-
-style="
-    background-image: url('vendor/images/backgroundeye.jpg');
-    background-position: center;
-    background-attachment:scroll;
-    background-size:cover;
-    background-repeat:no-repeat;
-">
+<div class="body">
 
 <div class="container">
     <div class="row justify-content-center">

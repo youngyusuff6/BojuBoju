@@ -1,7 +1,101 @@
 .body{
-/* background-image:url({{url('g')}}); */
-height:100vh;
-width:100vw;
+    left: 0%;
+    top: 0%;
+    position: absolute;
+    margin: 0;
+    padding-top: 10%;
+    background-image: url('../images/backgroundcolor.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.verify-body{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
 
+
+ /* verify  form header style */
+ .verify-header{
+    text-align: center;
+    padding-top:20px;
+    font-size: 25px;
+    font-weight: 900;
+    color:aliceblue;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+
+
+
+   /* input background color */
+   .form-control{
+    border-bottom-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-width: 2px;
+    border-bottom-color: #b298dc;
+    background-color:transparent;}
+
+
+
+    .form-control:focus{
+        background-color: transparent;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-width: 3px;
+        border-bottom-color: #b298dc;
+    }
+
+    /* input background color when entering values */
+    .form-control:active{
+        border-top: none;
+        border-bottom-color:#b298dc ;
+        border-bottom-width: 3px;
+      }
+
+    /* input background color on hover */
+
+        .form-control:hover{
+            background-color:transparent;
+            border-style: solid;
+            border-top:none;
+            border-left:none;
+            border-right:none;
+            border-bottom-color: #b298dc;
+            border-bottom-width: 4px;
+            }
+
+
+
+
+    /*verify button */
+      .verify-button{
+      font-weight:800;
+
+      background-image: url('../images/backgroundcolor.jpg');
+         background-repeat: no-repeat;
+           background-size: cover; color:  purple;
+           border-radius: 5px;
+      }
+
+
+
+       /* verify button on hover */
+       .verify-button:hover {
+       color: aliceblue;
+       background-image: url('../images/backgroundcolor.jpg');
+       background-repeat:repeat;
+
+
+        }
