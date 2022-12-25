@@ -19,16 +19,4 @@ class FooterController extends Controller
     public function disclaimer(){
         return view('footer.disclaimer');
     }
-    public function postReaction(Request $request){
-        dd($request);
-    }
-    public function admin(){
-        // $get_message = Message::where('updated_at','<>', Carbon::now())->get();
-        $get_message = Message::where('username','<>', Null)->get();
-//         $queryBuilder = DB::table('files')->whereRaw('created_at >= now() - interval 168 hour');
-// foreach($queryBuilder->get() as $file){
-//     File::delete(public_path().$file->path);
-// }    
-       
-    }
 }

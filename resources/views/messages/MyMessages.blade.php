@@ -96,7 +96,7 @@
 
                 <p class="mt-1 mb-1">-BojuBoju [@ {{$message->created_at}}]</p>
 
-            <div class="card-footer message-box bg-transparent ">
+           
               {{-- <span>
                  <form action="{{ route('postReaction',1) }}" method="POST">
                 @csrf
@@ -113,9 +113,6 @@
                   </div>
               </form> 
              </span> --}}
-            
-              <a href="" class="btn rounded mt-2 border-0 rounded-pill report"><i class="fa fa-flag m-r-25"></i>👍🏾</a>
-              <a href="#" class="btn rounded mt-2 border-0 rounded-pill report"><i class="fa fa-flag m-r-25"></i>👎🏾</a>
           </div>
         </div>
       </div>

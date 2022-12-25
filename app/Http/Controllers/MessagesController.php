@@ -190,6 +190,12 @@ class MessagesController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     public function react(Request $request, $id){
+        $id = DETOKENIZE($id);
+        return $id;
+     }
+
+
     /* FUNCTION TO DELETE A FILE FROM A GIVEN REAL PATH TO THE FILE TO BE DELETED. E.G C://HOLE/BOOKS/DASH.JPG   */
     private function FILE_DELETER($filename){
         /* check if the file real path is writable and if its exist and actually points to a file. */

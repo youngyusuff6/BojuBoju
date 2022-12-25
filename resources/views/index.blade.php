@@ -179,48 +179,74 @@
           <h1 class="section-title">Contact us</h1>
 
           <ul class="contact-ul">
-
+{{-- 
             <li>
               <i class="fa fa-phone"></i>
               <a href="tel:+2348089800377"><b>+2348089800377</b></a>
-            </li>
+            </li> --}}
 
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:pardeepkumar4bjp@gmail.com"><b> bojubojuanonymous@gmail.com</b></a>
+              <a href="mailto:bojubojuanonymous@gmail.com"><b> bojubojuanonymous@gmail.com</b></a>
             </li>
           </ul>
 
           <span>
             <a href="#" class="fb"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://twitter.com/bojubojuanonymous" class="twitter"><i class="fa-brands fa-twitter"></i></a>
           </span>
         </div>
       </div>
 
       <div class="col-md-6">
       <h1 class="section-title">Get in Touch</h1>
-        <form action="#" class="contFrm" method="POST">
+        <form action="{{route('contact-us')}}" class="contFrm" method="POST">
+          @csrf
           <div class="row">
             <div class="col-sm-6">
-              <input type="text" name="name" placeholder="Your Name" class="form-control" required />
+              <input type="text" name="name" placeholder="Your Name" value="{{@old('name')}}" class="form-control" required />
+              @error('name')
+                    <span class="text-danger">
+                        <small>{{ $message }}</small>
+                        </span>
+              @enderror
             </div>
 
             <div class="col-sm-6">
-              <input type="email" name="email" placeholder="Email Address" class="form-control" required />
+              <input type="email" name="email" placeholder="Email Address" value="{{@old('email')}}" class="form-control" required />
+              @error('email')
+              <span class="text-danger">
+                  <small>{{ $message }}</small>
+                  </span>
+             @enderror
             </div>
 
             <div class="col-sm-6">
-              <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required />
+              <input type="tel" name="phone" placeholder="Phone Number" value="{{@old('phone')}}" class="form-control" />
+              @error('phone')
+              <span class="text-danger">
+                  <small>{{ $message }}</small>
+                  </span>
+               @enderror
             </div>
 
             <div class="col-sm-6">
-              <input type="text" name="sub" placeholder="Subject" class="form-control" required />
+              <input type="text" name="sub" placeholder="Subject" class="form-control" value="{{@old('sub')}}" required  />
+              @error('sub')
+              <span class="text-danger">
+                  <small>{{ $message }}</small>
+                  </span>
+              @enderror
             </div>
 
             <div class="col-12">
-              <textarea class="form-control" rows="" cols="" placeholder="Your Message..." required></textarea>
+              <textarea class="form-control" rows="" name="message" cols="" placeholder="Your Message..." required>{{@old('message')}}</textarea>
+              @error('message')
+              <span class="text-danger">
+                  <small>{{ $message }}</small>
+                  </span>
+              @enderror
             </div>
 
             <div class="col-12">
