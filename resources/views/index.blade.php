@@ -140,7 +140,7 @@
     <div class="row about-container g-0">
         <div class="col about-text-container">
         <div class="card-body about-body">
-            <p class="card-text"> BojuBoju is an interactive anonymous messaging <br/> created  december 2022.
+            <p class="card-text"> BojuBoju is an interactive anonymous messaging Platform <br/> created  December 2022.
                 Built with laravel by contributing developers. <br/>
                 With BojuBoju, you can send and receive  <br/>anonymous messages from anyone for free!
             </p>
@@ -223,7 +223,7 @@
             </div>
 
             <div class="col-sm-6">
-              <input type="tel" name="phone" placeholder="Phone Number" value="{{@old('phone')}}" class="form-control" />
+              <input type="tel" name="phone" placeholder="Phone Number ( Optional )" value="{{@old('phone')}}" class="form-control" />
               @error('phone')
               <span class="text-danger">
                   <small>{{ $message }}</small>
