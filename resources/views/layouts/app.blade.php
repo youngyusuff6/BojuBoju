@@ -9,7 +9,7 @@
     <meta name="keywords" content="{{ Config::get('app.meta_keywords') }}" />
     <meta name="author" content="{{ Config::get('app.name') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="q-w-KMj13XTmEHpbVXjiTnl3Oz6NABAIqf5GCxVE-DI" />
+    <meta name="google-site-verification" content="0fmJ-LyvPXl-7kr8NK1-vgW-ezwAjhAsW2K2PoYba7Q" />
     <meta name="description" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_description') }}" />
     <meta property="og:title" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_title') }}" />
     <meta property="og:description" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_description') }}" />
