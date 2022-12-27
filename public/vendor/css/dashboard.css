@@ -80,6 +80,11 @@ svg :hover {
     background-image: url('../images/insta-color.jpg');
 
 }
+.twitter-share{
+    background-image: url('../images/twitter-color.png');
+
+}
+
 
 .account-settings{
   background-color: #b298dc;
