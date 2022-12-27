@@ -187,7 +187,7 @@
 
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:bojubojuanonymous@gmail.com"><b> bojubojuanonymous@gmail.com</b></a>
+              <a href="mailto:bojubojuanonymous@gmail.com"><b> bojubojuanonymous@yahoo.com</b></a>
             </li>
           </ul>
 
