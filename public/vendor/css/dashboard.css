@@ -74,8 +74,6 @@ svg :hover {
 .whatsapp-share{
     background-color:#25D366 ;
 }
-
-
 .insta-share{
     background-image: url('../images/insta-color.jpg');
 
@@ -115,3 +113,7 @@ svg :hover {
     background-color:#25D366 ;
 }
 
+.twitter-share:focus{
+    background-color: #00acee ;
+
+}
