@@ -29,8 +29,7 @@
 
 
 .share-links a:hover{
- transform: translateY(-4px);
- background-color: rgba(0, 0, 0,0.3);
+ transform: translateX(-4px);
    }
 
 
@@ -40,15 +39,15 @@
     text-align: end;
 }
 
-svg{
+i{
 color: aliceblue;
 }
 
-
-
-.facebook-share{
-    background-color: #4267B2;
+.profile-link-button i{
+    color:#1d1d1d;
 }
+
+
 
 .message{
     width: 20%;
@@ -62,9 +61,6 @@ color: aliceblue;
 }
 
 
-svg :hover {
-    margin-left: 5px;
-}
 
 
 @media only screen and (max-width:1200px) { .message{ width: 30%; }}
@@ -76,12 +72,41 @@ svg :hover {
 }
 .insta-share{
     background-image: url('../images/insta-color.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 .twitter-share{
     background-image: url('../images/twitter-color.png');
 
 }
+
+.facebook-share{
+    background-color: #4267B2;
+}
+
+
+
+.whatsapp-share:hover{
+    background-repeat: repeat;
+    background-color:#25D366 ;
+}
+.insta-share:hover{
+    background-repeat: repeat;
+    background-image: url('../images/insta-color.jpg');
+
+}
+.twitter-share:hover{
+    background-repeat: repeat;
+    background-image: url('../images/twitter-color.png');
+
+}
+
+.facebook-share:hover{
+    background-repeat: repeat;
+    background-color: #4267B2;
+}
+
 
 
 .account-settings{

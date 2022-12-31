@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title') Write a Message @endsection
 @yield('og-image')
+<meta property="og:image" content="{{ asset('vendor/images/usernamethumbnail.png')}}" />
 @section('styles')
 <link rel="stylesheet" href="{{url('vendor/css/create.css')}}">
 

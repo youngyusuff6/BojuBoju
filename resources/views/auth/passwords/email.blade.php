@@ -7,7 +7,7 @@
 
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
 @section('styles')
-    <link rel="stylesheet" href="{{url('vendor/css/reset.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/css/email.css')}}">
 
 @endsection
 @section('content')
@@ -21,8 +21,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 ">
-            <div class="card  verify-body">
-                <div class="card-header verify-header">{{ __('Reset Password') }}</div>
+            <div class="card  email-body">
+                <div class="card-header email-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -50,7 +50,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn verify-button">
+                                <button type="submit" class="btn email-button">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
                             </div>

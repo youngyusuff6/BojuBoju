@@ -13,7 +13,7 @@
     width: 100vw;
 }
 
-.verify-body{
+.email-body{
 
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
@@ -21,8 +21,8 @@
 }
 
 
- /* verify  form header style */
- .verify-header{
+ /* email  form header style */
+ .email-header{
     text-align: center;
     padding-top:20px;
     font-size: 25px;
@@ -79,8 +79,8 @@
 
 
 
-    /*verify button */
-      .verify-button{
+    /*email button */
+      .email-button{
       font-weight:800;
 
       background-image: url('../images/backgroundcolor.jpg');
@@ -91,8 +91,8 @@
 
 
 
-       /* verify button on hover */
-       .verify-button:hover {
+       /* email button on hover */
+       .email-button:hover {
        color: aliceblue;
        background-image: url('../images/backgroundcolor.jpg');
        background-repeat:repeat;
