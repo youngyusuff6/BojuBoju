@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use ResizeImage;
 use App\Models\User;
 use App\Models\Message;
-use App\Models\Message_decoy;
 use Illuminate\Http\Request;
+use App\Models\Message_decoy;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -58,7 +59,7 @@ class MessagesController extends Controller
      * @return \Illuminate\Http\Response
      */
 public function store(Request $request){
-         // Validate the request
+    // Validate the request
     $this->validate($request, [
         'message' => 'required|min:4|max:300',
         'image' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:1999'
@@ -86,15 +87,20 @@ public function store(Request $request){
         // Create the directory if it doesn't exist
         File::makeDirectory($FILE_UPLOADS_ROOT_DIRECTORY, 0777, true, true);
 
-        // Save the image to the directory
+        // Save the uploaded image to the directory
         $request->image->move($FILE_UPLOADS_ROOT_DIRECTORY, $fileNameToStore);
+
+        // Resize the image using the image resize library
+        $image = new ResizeImage($FILE_UPLOADS_ROOT_DIRECTORY.'/'.$fileNameToStore);
+        $image->resizeTo(300, 300, 'maxWidth');
+        $image->saveImage($FILE_UPLOADS_ROOT_DIRECTORY.'/'.$fileNameToStore);
 
         // Set the image path in the message record
         $path = './UPLOADS/'."MESSAGE_IMAGE/".date('m-d').'/'.$user_id."/".$fileNameToStore;
     } else {
         // Set the image path to null if no image was provided
         $path = NULL;
- }
+    }
 
 
             // FUNCTION TO HELP US FETCH THE IP ADDRESS OF THE WEBSITE VISITORS
