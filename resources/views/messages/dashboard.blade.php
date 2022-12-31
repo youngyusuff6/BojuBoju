@@ -52,20 +52,12 @@
     background-position: center;
     background-attachment:fixed;"
      class="card bg-transparent body border-0">
-    <div class="card-header d-flex bg-transparent ">
+    <div class="card-header d-flex bg-transparent justify-content-between ">
       <div>
          <h1 class="lead   bg-transparent">Good {{$timeOfTheDay}} <span class="username ">{{$username}},</span></h1>
       </div>
 
-        {{-- <div class="tooltip">
-          <button onclick="myFunction()" >
-            <span class="tooltiptext btn btn-info" id="myTooltip">Copy to clipboard</span>
-            Profile Link
-            </button>
-          </div> --}}
-        <a href="#" onclick="copyText()" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
-          <span class="tooltiptext" id="myTooltip"></span>
-        Profile Link</a>
+        <button onclick="copy();" class="btn btn-info flex-end"  data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Profile Link</button>
       </div>
     <div class="card-body  bg-transparent border-0">
         <p>You're logged in!</p>
@@ -160,15 +152,14 @@ Share to Twitter
 @endsection
 @section('scripts')
 <script>
-  function copyText() {
-
-    var username = document.createElement("input");
-    username.setAttribute("type", "text");
-    username.setAttribute("value", "<?php echo route('/').'/'.$username; ?>");
-      /* Copy text into clipboard */
-      navigator.clipboard.writeText(username.value);
-      alert('Link copied to clipboard');
-      // ("<?php route('/').'$username' ;?>");
-  }
+function copy() {
+  let url = '<?php echo route('/').'/'.$username; ?>'
+    navigator.clipboard.writeText(url).then(function() {
+        alert('Copied!');
+    }, function() {
+        alert('Copy error')
+    });
+    
+}
 </script>
 @endsection
