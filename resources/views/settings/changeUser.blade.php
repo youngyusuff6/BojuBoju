@@ -3,8 +3,9 @@
 @extends('layouts.app')
 @section('title') Change Email Address Address @endsection
 
-
-
+@section('og-image')
+<meta property="og:image" content="{{ asset('vendor/images/indexthumbnail.png')}}" />
+@endsection
 {{-- MAIN CONTENTS --}}
 
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}

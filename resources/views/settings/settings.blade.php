@@ -1,11 +1,12 @@
 @extends('layouts.app')
 @section('title') Settings @endsection
-
+@section('og-image')
+<meta property="og:image" content="{{ asset('vendor/images/indexthumbnail.png')}}" />
+@endsection
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
 @section('styles')
     <link rel="stylesheet" href="{{url('vendor/css/settings.css')}}">
 @endsection
-
 @section('content')
 <div style=" background-image: url('vendor/images/background-eye.gif');
     background-repeat:no-repeat;

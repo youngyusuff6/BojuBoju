@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use ResizeImage;
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Message;
 use Illuminate\Http\Request;
@@ -182,8 +183,8 @@ public function store(Request $request){
 
         // Delete the user record
         $user = User::where('id','=', $user_id)->delete();
-
-        return redirect()->route('home')->with('message', 'deleted');
+         Toastr::success('Account Deleted.','Done!');   
+        return redirect()->route('home');
     }
 
     /**
@@ -193,13 +194,7 @@ public function store(Request $request){
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-     public function react(Request $request, $id){
-        $id = DETOKENIZE($id);
-        return $id;
-     }
-
-
+   
     /* FUNCTION TO DELETE A FILE FROM A GIVEN REAL PATH TO THE FILE TO BE DELETED. E.G C://HOLE/BOOKS/DASH.JPG   */
     private function FILE_DELETER($filename){
         /* check if the file real path is writable and if its exist and actually points to a file. */

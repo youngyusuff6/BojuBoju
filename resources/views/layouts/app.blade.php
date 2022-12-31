@@ -13,8 +13,8 @@
     <meta name="description" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_description') }}" />
     <meta property="og:title" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_title') }}" />
     <meta property="og:description" content="{{ Config::get('app.name') }} : {{ Config::get('app.meta_description') }}" />
-    <meta property="og:image" content="{{ asset('vendor/images/indexthumbnail.png')}}" />
-
+    @yield('og-image')
+    
     <title> {{ Config::get('app.name') }} | @yield('title') </title>
 
     <!-- Scripts -->

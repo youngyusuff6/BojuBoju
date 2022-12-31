@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\CronController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
@@ -15,6 +16,8 @@ use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 |
 */
 
+// Route for the cron job to call
+Route::get('/delete-old-messages', [CronController::class, 'deleteOldMessages']);
 
 Route::get('/', function () {
     return view('index');

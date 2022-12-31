@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('title') MyMessages  @endsection
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
+@section('og-image')
+<meta property="og:image" content="{{ asset('vendor/images/indexthumbnail.png')}}" />
+@endsection
 @section('styles')
 <link rel="stylesheet" href="{{url('vendor/css/mymessages.css')}}">
 <style>
@@ -126,7 +129,7 @@
       </div>
 @endif
 @if (count($messages) > 0)
-<p class="text-center text-light"><small >PS:Messages are automatically deleted after 30days</small></p>
+<p class="text-center text-light"><small >PS:Messages are automatically deleted after 15days</small></p>
 @endif
 <div class="pagination justify-content-center bg-transparent mt-3">
     {{$messages->links('components.pagination')}}

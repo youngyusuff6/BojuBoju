@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('og-image')
+<meta property="og:image" content="{{ asset('vendor/images/indexthumbnail.png')}}" />
+@endsection
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
 @section('styles')
     <link rel="stylesheet" href="{{url('vendor/css/homepage.css')}}">

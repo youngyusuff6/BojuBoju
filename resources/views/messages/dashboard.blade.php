@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('title') Dashboard @endsection
-
+@section('og-image')
+<meta property="og:image" content="{{ asset('vendor/images/indexthumbnail.png')}}" />
+@endsection
 {{-- ADD CSS CODE HERE | OR LINK CSS HERE --}}
 @section('styles')
     <link rel="stylesheet" href="{{url('vendor/css/dashboard.css')}}">
@@ -94,14 +96,6 @@
     <i class="bi bi-twitter"></i>
     </a>
 
-
-
-
-       <a target="_blank" class="btn rounded-pill border-0 fs-5 insta-share mt-3" href="https://twitter.com/share?text=Hi, send me an anonymous message here!&url=<?php echo route('/').'/'.$username; ?>&hashtags=BojuBoju,Anonymous">
-
-       Share to Instagram
-       <i class="bi bi-instagram"></i>
-  </a>
 
        <a class="btn rounded-pill border-0 fs-5 account-settings  mt-3" href="{{route('changeSettings')}}">
        Account Settings
