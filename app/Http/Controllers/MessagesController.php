@@ -10,6 +10,7 @@ use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
+
 class MessagesController extends Controller
 {
     public function __construct()
@@ -56,52 +57,44 @@ class MessagesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-       public function store(Request $request){
-        $username = $request->input('username');
-        $user_id = User::where('users.username','=', $username)->value('users.id');
-        $message = new Message();
-        $decoy_table = new Message_decoy();
+public function store(Request $request){
+         // Validate the request
+    $this->validate($request, [
+        'message' => 'required|min:4|max:300',
+        'image' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:1999'
+    ]);
 
-        $this->validate($request,[
-            'message' => 'required|min:4|max:300',
-            'image' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:1999'
-        ]);
-        // 
-        if($request->hasFile('image')){
-             // Get just Extension
-             $extension = $request->file('image')->getClientOriginalExtension();
-             // construct a unique name for our new image file
-             $fileNameToStore = 'messageImage_'.$user_id.'_'.time().'.'.$extension;
-             $TEMP_IMAGE_NAME = "TEMP_".$user_id.'_messageImage_'.time().'.'.$extension;
-             // construct destination folder directory string.
-             $FILE_UPLOADS_ROOT_DIRECTORY = './UPLOADS/'."MESSAGE_IMAGE/".'/'.date('m-d').'/'.$user_id;
-            
-        
-             // save image file to disk (Upload Image)
-             $request->image->move(public_path($FILE_UPLOADS_ROOT_DIRECTORY), $TEMP_IMAGE_NAME);
-          
+    // Get the user's ID
+    $username = $request->input('username');
+    $user_id = User::where('users.username','=', $username)->value('users.id');
 
-            /* we create a full path to the location of the image we want to save to file. This part will link with the temporary image. */
-            $TEMP_FULL_PATH_TO_IMAGE = $FILE_UPLOADS_ROOT_DIRECTORY.'/'.$TEMP_IMAGE_NAME;
+    // Create a new message and decoy record
+    $message = new Message();
+    $decoy_table = new Message_decoy();
 
-            // HERE WE CREATE TWO INSTANCES OF THE "ResizeImage" CLASS BELOW, SO WE CAN USE ITS OBJECT TO RESIZE THE IMAGE WE JUST STORED IN A TEMPORARY 
-            // LOCATION ON THE SERVER, REASON WE HAVE THAT TEMPORARY STORED IMAGE IS SO THAT WE CAN EDIT IT TO GET ALL OTHER SIZES OF IMAGES WE WANT BEFORE
-            // WE DELETE THE TEMPORARY IMAGE.
-            $resize_Object = new \ResizeImage($TEMP_FULL_PATH_TO_IMAGE);
-            // HERE WE USE THE FIRST OBJECT OF OUR "ResizeImage" CLASS TO RECREATE THE TEMPORARY IMAGE AND RESIZE THE SAMPLE OF THE RECREATED TREMPORARY
-            // IMAGE TO THE STANDARD SIZE FOR DISPLAY PICTURES ON THIS PLATFORM. AT THE END OF THIS FIRST RESIZING WE SAVE THE NEWLY RESIZED IMAGE DATA TO
-            // FILE WITH A NEW UNIQUE NAME AND WE PURGE THE FIRST OBJECT OF OUR "ResizeImage" CLASS, TO RELEASE MEMORY.
-            $resize_Object->resizeTo(500, 600, 'exact');
-            $resize_Object->saveImage($FILE_UPLOADS_ROOT_DIRECTORY.'/'.$fileNameToStore);
-            $resize_Object = null;
-            // NOW AT THIS JUNCTION WE ARE CERTAIN THAT WE ARE DONE USING THE TEMPORARY IMAGE WE SAVED EARLIER AND USED TO CREATE TWO DIFFERENT SIZES OF
-            // IMAGES, NOW THE TEMPORARY IMAGE IS OF NO USE TO US ANYMORE, THEREFORE WE RUN THE FUNCTION BELOW TO DELETE IT FROM THE SERVER
-            $this->FILE_DELETER($TEMP_FULL_PATH_TO_IMAGE);
-            // Here is the exact path we need to save in the database, if we want this app to work on local and live servers respectively.
-            $path = './UPLOADS/'."MESSAGE_IMAGE/".'/'.date('m-d').'/'.$user_id."/".$fileNameToStore;
-        }else{
-            $path = NULL;
-        }
+    // If the request has an image, save it to the file system
+    if ($request->hasFile('image')) {
+        // Get the file extension
+        $extension = $request->file('image')->getClientOriginalExtension();
+
+        // Construct a unique name for the image file
+        $fileNameToStore = 'messageImage_'.$user_id.'_'.time().'.'.$extension;
+
+        // Construct the destination folder directory string
+        $FILE_UPLOADS_ROOT_DIRECTORY = './UPLOADS/'."MESSAGE_IMAGE/".date('m-d').'/'.$user_id;
+
+        // Create the directory if it doesn't exist
+        File::makeDirectory($FILE_UPLOADS_ROOT_DIRECTORY, 0777, true, true);
+
+        // Save the image to the directory
+        $request->image->move($FILE_UPLOADS_ROOT_DIRECTORY, $fileNameToStore);
+
+        // Set the image path in the message record
+        $path = './UPLOADS/'."MESSAGE_IMAGE/".date('m-d').'/'.$user_id."/".$fileNameToStore;
+    } else {
+        // Set the image path to null if no image was provided
+        $path = NULL;
+ }
 
 
             // FUNCTION TO HELP US FETCH THE IP ADDRESS OF THE WEBSITE VISITORS
@@ -171,15 +164,20 @@ class MessagesController extends Controller
     public function delete()
     {
         $user_id =  Auth::id();
-        $path = './UPLOADS/'."MESSAGE_IMAGE/".$user_id;
-       
-        if(File::exists($path)){
-               File::deleteDirectory($path);
-            }
+        $path = './UPLOADS/MESSAGE_IMAGE';
+
+        // Get all of the directories that contain images for this user
+        $image_directories = File::directories($path, $user_id);
+
+        // Loop through each directory and delete it
+        foreach ($image_directories as $directory) {
+            File::deleteDirectory($directory);
+        }
+
+        // Delete the user record
         $user = User::where('id','=', $user_id)->delete();
 
         return redirect()->route('home')->with('message', 'deleted');
-       
     }
 
     /**
