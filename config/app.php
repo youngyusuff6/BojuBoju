@@ -240,7 +240,7 @@ return [
     |
     */
     'meta_keywords' => 'anonymous, friends, messaging, unknown, bojuboju, free-friends',
-    'meta_title' => 'BojuBoju is an interactive anonymous messaging app with an interesting dare game',
-    'meta_description' => "With BojuBoju, you can send and receive anonymous messages from anyone for free!",
+    'meta_title' => 'BojuBoju - Anonymous Messaging App for sending anonymous messages and images',
+    'meta_description' => "BojuBoju is an anonymous messaging app that allows users to send messages and images to their friends without revealing their identity. Users can create a profile on the app, and then share a unique link with their friends. When a friend clicks on the link, they are taken to a page where they can send anonymous messages and images to the user's profile.",
   
 ];

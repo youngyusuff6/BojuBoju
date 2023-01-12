@@ -79,7 +79,7 @@
 
 
         <div class="container share-links text-center rounded mt-5 border-0 bg-transparent">
-        <a target="_blank" href="https://api.whatsapp.com/send?text=Hello, I am {{$username}}, Send me an anonynous message on <?php echo route('/').'/'.$username; ?>" class="btn rounded-pill whatsapp-share fs-5  mt-3">
+        <a target="_blank" href="https://api.whatsapp.com/send?text=🗣️ Hey there! My username on BojuBoju is {{$username}}. Send me anonymous messages and images 📷 on <?php echo route('/').'/'.$username; ?>! I can't wait to see what you have to say." class="btn rounded-pill whatsapp-share fs-5  mt-3">
 
         Share To Whatsapp
         <i class="bi bi-whatsapp"></i></a>
@@ -91,7 +91,7 @@
 
 
 
-        <a target="_blank" class="btn rounded-pill border-0 fs-5 twitter-share  mt-3" href="https://twitter.com/share?text=Hi, send me an anonymous message here!&url=<?php echo route('/').'/'.$username; ?>&hashtags=BojuBoju,Anonymous">
+        <a target="_blank" class="btn rounded-pill border-0 fs-5 twitter-share  mt-3" href="https://twitter.com/share?text=🗣️ Hey there! My username on BojuBoju is {{$username}}. Send me anonymous messages and images 📷 on <?php echo route('/').'/'.$username; ?>! I can't wait to see what you have to say. &hashtags=BojuBoju,Anonymous">
     Share to Twitter
     <i class="bi bi-twitter"></i>
     </a>

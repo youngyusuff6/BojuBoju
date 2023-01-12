@@ -132,7 +132,7 @@ public function store(Request $request){
         $decoy_table->user_id = $user_id;
         $decoy_table->save();
 
-        Toastr::success('Message Sent Successfully. Now it`s your turn to write!','Message Sent!');      
+        Toastr::success('💬 Your anonymous message has been sent, keep it coming!!','Message Sent!');      
         return back();
     }
 
