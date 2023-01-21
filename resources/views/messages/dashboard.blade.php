@@ -7,43 +7,48 @@
 @section('styles')
     <link rel="stylesheet" href="{{url('vendor/css/dashboard.css')}}">
     <style>
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
 
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 140px;
-      background-color: #555;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 5px;
-      position: absolute;
-      z-index: 1;
-      bottom: 150%;
-      left: 50%;
-      margin-left: -75px;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
 
-    .tooltip .tooltiptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: #555 transparent transparent transparent;
-    }
+/*
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
 
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} */
+
+
     </style>
 @endsection
 @section('content')
@@ -59,8 +64,14 @@
          <h1 class="lead   bg-transparent">Good {{$timeOfTheDay}} <span class="username ">{{$username}},</span></h1>
       </div>
 
-        <button onclick="copy();" class="btn btn-info profile-link-button flex-end"  data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Profile Link <i class="bi bi-link-45deg"></i></button>
-      </div>
+     <!-- Trigger -->
+<button class="btn" data-clipboard-text=" there">
+    Copy to clipboard
+</button>
+ <!-- <button onclick="copy();" class="btn btn-info profile-link-button flex-end"  data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Profile Link <i class="bi bi-link-45deg"></i></button> -->
+
+
+</div>
     <div class="card-body  bg-transparent border-0">
         <p>You're logged in!</p>
 
@@ -134,6 +145,8 @@
 
 @endsection
 @section('scripts')
+<script src="dist/clipboard.min.js"></script>
+
 <script>
 function copy() {
   let url = '<?php echo route('/').'/'.$username; ?>'
@@ -144,5 +157,9 @@ function copy() {
     });
 
 }
+
+
+var clipboard = new ClipboardJS('.btn');
+clipboard.destroy();
 </script>
 @endsection
