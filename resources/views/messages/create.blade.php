@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title') Write a Message @endsection
 @section('og-image')
+<meta property="og:title" content="Send {{$username['username']}} a message" />
 <meta property="og:image" content="{{ asset('vendor/images/usernamethumbnail.png')}}" />
 @endsection
 @section('styles')

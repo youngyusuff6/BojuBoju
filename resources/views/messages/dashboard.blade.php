@@ -64,14 +64,8 @@
          <h1 class="lead   bg-transparent">Good {{$timeOfTheDay}} <span class="username ">{{$username}},</span></h1>
       </div>
 
-     <!-- Trigger -->
-<button class="btn" data-clipboard-text=" there">
-    Copy to clipboard
-</button>
- <!-- <button onclick="copy();" class="btn btn-info profile-link-button flex-end"  data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Profile Link <i class="bi bi-link-45deg"></i></button> -->
-
-
-</div>
+        <button class="btn btn-info btn-copy profile-link-button flex-end"  data-clipboard-text="<?php echo route('/').'/'.$username; ?>" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Profile Link <i class="bi bi-link-45deg"></i></button>
+      </div>
     <div class="card-body  bg-transparent border-0">
         <p>You're logged in!</p>
 
@@ -90,7 +84,7 @@
 
 
         <div class="container share-links text-center rounded mt-5 border-0 bg-transparent">
-        <a target="_blank" href="https://api.whatsapp.com/send?text=Hello, I am {{$username}}, Send me an anonynous message on <?php echo route('/').'/'.$username; ?>" class="btn rounded-pill whatsapp-share fs-5  mt-3">
+        <a target="_blank" href="https://api.whatsapp.com/send?text=🗣️ Hey there! My username on BojuBoju is {{$username}}. Send me anonymous messages and images 📷 on <?php echo route('/').'/'.$username; ?>! I can't wait to see what you have to say." class="btn rounded-pill whatsapp-share fs-5  mt-3">
 
         Share To Whatsapp
         <i class="bi bi-whatsapp"></i></a>
@@ -102,7 +96,7 @@
 
 
 
-        <a target="_blank" class="btn rounded-pill border-0 fs-5 twitter-share  mt-3" href="https://twitter.com/share?text=Hi, send me an anonymous message here!&url=<?php echo route('/').'/'.$username; ?>&hashtags=BojuBoju,Anonymous">
+        <a target="_blank" class="btn rounded-pill border-0 fs-5 twitter-share  mt-3" href="https://twitter.com/share?text=🗣️ Hey there! My username on BojuBoju is {{$username}}. Send me anonymous messages and images 📷 on <?php echo route('/').'/'.$username; ?>! I can't wait to see what you have to say. &hashtags=BojuBoju,Anonymous">
     Share to Twitter
     <i class="bi bi-twitter"></i>
     </a>
@@ -145,21 +139,11 @@
 
 @endsection
 @section('scripts')
-<script src="dist/clipboard.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js" integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-function copy() {
-  let url = '<?php echo route('/').'/'.$username; ?>'
-    navigator.clipboard.writeText(url).then(function() {
-        alert('Copied!');
-    }, function() {
-        alert('Copy error')
-    });
-
-}
-
-
-var clipboard = new ClipboardJS('.btn');
-clipboard.destroy();
+var clipboard = new ClipboardJS('.btn-copy');
+clipboard.on('success', function(e) {
+    alert('Profile link copied to clipboard!')
+});
 </script>
 @endsection
