@@ -14,7 +14,7 @@
     <meta property="og:title" content="{{ Config::get('app.meta_title') }}" />
     <meta property="og:description" content="{{ Config::get('app.meta_description') }}" />
     @yield('og-image')
-    
+
     <title> {{ Config::get('app.name') }} | @yield('title') </title>
 
     <!-- Scripts -->
@@ -184,7 +184,7 @@ style="
 
 
 
-        <p class="text-center"> &copy; @php echo date('Y')@endphp BojuBoju | Anonymous Messages.  <br> All Rights Reserved.</p>
+        <p class="bojuboju-signature text-center"> &copy; @php echo date('Y')@endphp BojuBoju | Anonymous Messages.  <br> All Rights Reserved.</p>
     </footer>
     @yield('scripts')
     <!-- Toast js Library -->

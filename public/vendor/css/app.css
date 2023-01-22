@@ -5,141 +5,172 @@ margin-left: 5%;
 
 
 .nav-item :hover{
-   color: #b298dc;
+color: #b298dc;
+}
+
+.navbar{
+box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+width: 100%;
+padding-bottom: 10px;
+height: 97px;
+}
+
+.navbar-toggler svg{
+color: purple;
+font-weight: 900;
+}
+
+.navbar-collapse{
+text-align: right;
+}
+
+.navbar-nav a{
+text-decoration: none;
+color:aliceblue;}
+
+.navbar-nav li{
+font-family: 'PT Sans', sans-serif;
+font-weight:900;
+font-size:18px;
+margin-right:10px ;
+}
+
+
+.profile-btn h5{
+color: aliceblue;
+font-weight: 600;
+}
+
+.profile-btn:hover{
+    color: #b298dc;
     }
 
-   .navbar{
-    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 100%;
-    padding-bottom: 10px;
-    height: 97px;
-   }
 
-    .navbar-toggler svg{
-    color: purple;
-    font-weight: 900;
-   }
-
-   .navbar-collapse{
-    text-align: right;
-   }
-
-   .navbar-nav a{
-   text-decoration: none;
-    color:aliceblue;}
-
-   .navbar-nav li{
-    font-family: 'PT Sans', sans-serif;
-    font-weight:900;
-    font-size:18px;
-    margin-right:10px ;
-   }
-
-   .profile-btn-group{margin-right: 6%;}
-   @media only screen and (max-width:520px) {.profile-btn-group{margin-right: 0%;}}
-
-   .profile-btn:active{
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    margin-top: 4px;
-
-  }
-  .profile-btn:focus{
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-
-  }
-
-  .profile-btn:focus svg{
+.profile-btn:focus h5{
     color: #b298dc;
-  }
+    }
 
-   .dropdown-menu{
-    background-color: rgba(0, 0, 0, 0.4);
-     box-shadow: rgba(0.1, 0, 0, 0);
-    color:aliceblue;
-    font-size: 17px;
-    font-weight: 900px;
+.profile-btn-group{margin-right: 6%;}
+@media only screen and (max-width:520px) {.profile-btn-group{margin-right: 0%;}}
 
-   }
+.profile-btn:active{
+box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+margin-top: 4px;
 
+}
+.profile-btn:focus{
+box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 
-   .dropdown-menu li :hover{
-    color:purple;
-    background-color: transparent;
+}
 
-   }
+.profile-btn svg{
+color: aliceblue;
+}
 
-   .dropdown-item{
-    color: aliceblue;
+.profile-btn:focus svg{
+color: #b298dc;
+}
 
-   }
+.dropdown-menu{
+background-color: rgba(0, 0, 0, 0.4);
+box-shadow: rgba(0.1, 0, 0, 0);
+color:aliceblue;
+font-size: 17px;
+font-weight: 900px;
 
-
-   footer{
-    position: relative;
-   }
-
-
-   .docs{
-    display: flex;
-    text-align: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-   }
-
-   .docs li{
-    list-style-type: none;
-    margin-left: 5px;
-    margin-right: 5px;
-
-   }
-   .docs a{
-    text-decoration: none;
-    color: aliceblue;
-    font-weight: 600;
-   }
-
-   .docs li :hover{
-    color: purple;}
+}
 
 
+.dropdown-menu li :hover{
+color:purple;
+background-color: transparent;
+
+}
+
+.dropdown-item{
+color: aliceblue;
+
+}
+
+
+footer{
+position: relative;
+}
+
+
+.docs{
+display: flex;
+text-align: center;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+justify-content: center;
+}
+
+.docs p{
+color:whitesmoke;
+}
+
+
+.docs li{
+list-style-type: none;
+margin-left: 5px;
+margin-right: 5px;
+
+}
+.docs a{
+text-decoration: none;
+color: aliceblue;
+font-weight: 600;
+}
+
+.docs li :hover{
+color:wheat;
+}
+
+.bojuboju-signature{
+    color: #b298dc;
+}
 
 
 
-     @media only screen and (max-width:400px){
 
-   .drop-profile{
-    margin-right: 0%;
-  }
+
+
+
+@media only screen and (max-width:400px){
+
+.drop-profile{
+margin-right: 0%;
+}
 
 
 .navbar-brand{
-    margin-left: 0%;
-    width: 20px;
-    }
+margin-left: 0%;
+width: 20px;
+}
 
-    .navbar-brand img{
-        height: 60px;
-        width: 90px;
-        }
-
-
-        .username p {
-            font-weight: 600;
-            font-size: 15px;
-           }
+.navbar-brand img{
+height: 60px;
+width: 90px;
+}
 
 
-
-     }
+.username p {
+font-weight: 600;
+font-size: 15px;
+}
 
 
 
-     @media only screen and (max-width:800px){
+}
 
-     .dropdown-menu{
-        position:absolute;
-        right:10%;
-       }
-    }
+
+
+@media only screen and (max-width:800px){
+
+.dropdown-menu{
+position:absolute;
+right:10%;
+}
+}

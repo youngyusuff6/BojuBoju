@@ -96,7 +96,7 @@
     </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
     <div class="accordion-body">
-      <strong>  Create An Account On The Register Page And If You Have An Account <b><a style="text-decoration:none ; color:orange;" href="/login">  Click here</a></strong></b>    </div>
+      <strong>  Create An Account On The <b><a style="text-decoration:none ; color:orange;" href="/login"> Register </a></strong></b>   Page And If You Have An Account <b><a style="text-decoration:none ; color:orange;" href="/login">  Click here</a></strong></b>    </div>
     </div>
   </div>
   <div class="accordion-item  bg-transparent">
