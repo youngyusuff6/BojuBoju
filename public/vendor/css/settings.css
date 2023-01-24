@@ -10,12 +10,12 @@
     width: 25%;
     background-image: url('../images/backgroundcolor.jpg');
     background-repeat: no-repeat;
-    color:black;
+    color: aliceblue;
 }
 
 .buttons a:hover{
     transform: scaleZ(-10%);
-   color: aliceblue;}
+    color:#b298dc; }
 
 @media only screen and (max-width:920px){.buttons a{ width: 40%;}}
 @media only screen and (max-width:450px){.buttons a{ width: 80%;}}

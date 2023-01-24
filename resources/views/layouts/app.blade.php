@@ -62,14 +62,7 @@
 
 
 
-<body
-style="
-    background-image: url('vendor/images/backgroundcolor.jpg');
-    background-position: center;
-    background-attachment:scroll;
-    background-size:cover;
-    background-repeat:no-repeat;
-">
+<body class="app-body">
 
     <div id="app">
 

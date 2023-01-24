@@ -1,3 +1,23 @@
+.app-body{
+    background-image: url('../images/backgroundcolor.jpg');
+    background-position: center;
+    background-blend-mode:normal;
+    background-attachment:scroll;
+    background-size:cover;
+    background-repeat:no-repeat;
+   }   /* animation-name: body-transition;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes body-transition {
+   0%{ background-image: url('../images/backgroundcolor.jpg'); background-attachment:scroll;   background-position: bottom;}
+   25%{ background-image: url('../images/backgroundcolor.jpg');  background-attachment: fixed; background-position:center; }
+   50%{ background-image: url('../images/backgroundcolor.jpg');  background-attachment:scroll; background-position: bottom;}
+   75%{ background-image: url('../images/backgroundcolor.jpg');  background-attachment: fixed;  background-position: top;}
+     100%{ background-image: url('../images/backgroundcolor.jpg'); background-attachment: scroll;  background-position: center;}
+} */
+
 
 .navbar-brand{
 margin-left: 5%;

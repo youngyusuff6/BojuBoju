@@ -131,7 +131,7 @@
     /* register button */
       .register-button{
         font-weight:800;
-       background-image: url('../images/backgroundcolor.jpg');
+       background-image: url('../images/backgroundcolorprev.jpg');
            background-repeat: repeat;
              background-size: cover; color:  purple;
              border-radius: 5px;

@@ -143,11 +143,11 @@
 <div class="row about-container g-0">
 <div class="col about-text-container">
 <div class="card-body about-body">
-    <p class="card-text">Welcome to <b>BojuBoju,</b> he anonymous messaging platform that allows you to send messages to your friends without them knowing who sent it. We believe that everyone should have the freedom to express themselves without fear of judgement, and that's why we've created <b>BojuBoju</b>.
+    <p class="card-text">Welcome to <b>BojuBoju,</b> the anonymous messaging platform that allows you to send messages to your friends without them knowing who sent it. We believe that everyone should have the freedom to express themselves without fear of judgement, and that's why we've created <b>BojuBoju</b>.
     <p>Our mission is to provide a safe and easy-to-use platform for anonymous communication. Whether you want to send a silly message to a friend, or share something personal that you're not comfortable sharing under your own name, <b>BojuBoju</b> is here for you.</p>
     <p>We're committed to maintaining the anonymity and privacy of our users, and we've built <b>BojuBoju</b> with this in mind. We also provide an option to add images to the message, making it more fun and interactive.</p>
-    <p>We're a small but dedicated team, and we're constantly working to improve <b>BojuBoju</b> and make it the best it can be. </br>If you have any questions or feedback, please don't hesitate to reach out to us through the contact us page.</p> 
-    <p>Thank you for choosing <b>BojuBoju</b>, and we hope you enjoy using our platform!</p>             
+    <p>We're a small but dedicated team, and we're constantly working to improve <b>BojuBoju</b> and make it the best it can be. </br>If you have any questions or feedback, please don't hesitate to reach out to us through the contact us page.</p>
+    <p>Thank you for choosing <b>BojuBoju</b>, and we hope you enjoy using our platform!</p>
     </p>
 </div>
 </div>
@@ -197,9 +197,9 @@
           </ul>
 
           <span>
-            <a href="#" class="fb"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="insta"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/bojubojuanonymous" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a target="_blank" href="https://web.facebook.com/profile.php?id=100088687944447" class="fb"><i class="fa-brands fa-facebook"></i></a>
+            <a target="_blank" href="https://www.instagram.com/bojubojuanonymous/" class="insta"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank"  href="https://twitter.com/bojuboju_" class="twitter"><i class="fa-brands fa-twitter"></i></a>
           </span>
         </div>
       </div>
