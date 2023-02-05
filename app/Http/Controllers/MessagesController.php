@@ -59,74 +59,77 @@ class MessagesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-public function store(Request $request){
-    // Validate the request
-    $this->validate($request, [
-        'message' => 'required|min:4|max:300',
-        'image' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:1999'
-    ]);
+    public function store(Request $request)
+    {
+        // Validate the request data
+        $this->validate($request, [
+            'message' => 'required|min:4|max:300',
+            'image' => 'image|nullable|mimes:jpeg,png,jpg,gif,svg|max:1999'
+        ]);
+    
+        // Get the user's ID
+        $username = $request->input('username');
+        $user_id = User::where('username', $username)->value('id');
+    
+        // Create a new message and decoy record
+        $message = new Message();
+        $decoy_table = new Message_decoy();
+    
+        // Check if the request has an image
+        if ($request->hasFile('image')) {
+            // Get the image's extension
+            $extension = $request->file('image')->getClientOriginalExtension();
+            //Add a random text
 
-    // Get the user's ID
-    $username = $request->input('username');
-    $user_id = User::where('users.username','=', $username)->value('users.id');
-
-    // Create a new message and decoy record
-    $message = new Message();
-    $decoy_table = new Message_decoy();
-
-    // If the request has an image, save it to the file system
-    if ($request->hasFile('image')) {
-        // Get the file extension
-        $extension = $request->file('image')->getClientOriginalExtension();
-
-        // Construct a unique name for the image file
-        $fileNameToStore = 'messageImage_'.$user_id.'_'.time().'.'.$extension;
-
-        // Construct the destination folder directory string
-        $FILE_UPLOADS_ROOT_DIRECTORY = './UPLOADS/'."MESSAGE_IMAGE/".date('m-d').'/'.$user_id;
-
-        // Create the directory if it doesn't exist
-        File::makeDirectory($FILE_UPLOADS_ROOT_DIRECTORY, 0777, true, true);
-
-        // Save the uploaded image to the directory
-        $request->image->move($FILE_UPLOADS_ROOT_DIRECTORY, $fileNameToStore);
-
-        // Resize the image using the image resize library
-        $image = new ResizeImage($FILE_UPLOADS_ROOT_DIRECTORY.'/'.$fileNameToStore);
-        $image->resizeTo(300, 300, 'maxWidth');
-        $image->saveImage($FILE_UPLOADS_ROOT_DIRECTORY.'/'.$fileNameToStore);
-
-        // Set the image path in the message record
-        $path = './UPLOADS/'."MESSAGE_IMAGE/".date('m-d').'/'.$user_id."/".$fileNameToStore;
-    } else {
-        // Set the image path to null if no image was provided
-        $path = NULL;
-    }
-
-
-            // FUNCTION TO HELP US FETCH THE IP ADDRESS OF THE WEBSITE VISITORS
-        function getUserIpAddr(){
-            if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-                //ip from share internet
+            // Construct a unique name for the image file
+            $fileNameToStore = 'BojuBoju_' . $user_id . uniqid() .'_' .date('m-d'). '_' . time() . '.' . $extension;
+    
+            // Construct the destination folder directory string
+            $FILE_UPLOADS_ROOT_DIRECTORY = './UPLOADS/MESSAGE_IMAGE/';
+    
+            // Create the directory if it doesn't exist
+            File::makeDirectory($FILE_UPLOADS_ROOT_DIRECTORY, 0777, true, true);
+    
+            // Save the uploaded image to the directory
+            $request->image->move($FILE_UPLOADS_ROOT_DIRECTORY, $fileNameToStore);
+    
+            // Resize the image using the image resize library
+            $image = new ResizeImage($FILE_UPLOADS_ROOT_DIRECTORY . '/' . $fileNameToStore);
+            $image->resizeTo(300, 300, 'maxWidth');
+            $image->saveImage($FILE_UPLOADS_ROOT_DIRECTORY . '/' . $fileNameToStore);
+    
+            // Set the image name in the message record
+            $image_name = $fileNameToStore;
+        } else {
+            // Set the image name to null if no image was provided
+            $image_name = NULL;
+        }
+    
+        // Get the user's IP address
+        function getUserIpAddr()
+        {
+            if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+                // IP address from shared internet
                 $ip = $_SERVER['HTTP_CLIENT_IP'];
-            }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-                //ip pass from proxy
+            } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+                // IP address passed through proxy
                 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            }else{
+            } else {
                 $ip = $_SERVER['REMOTE_ADDR'];
             }
             return $ip;
         }
-
+    
+        // Set the message record's data
         $message->ip_address = getUserIpAddr();
-        $message->image = $path;
+        $message->image = $image_name;
         $message->message = $request->input('message');
         $message->username = $request->input('username');
         $message->user_id = $user_id;
         $message->save();
 
         $decoy_table->ip_address = getUserIpAddr();
-        $decoy_table->image = $path;
+        $decoy_table->image = $image_name;
         $decoy_table->message = $request->input('message');
         $decoy_table->username = $request->input('username');
         $decoy_table->user_id = $user_id;

@@ -1,3 +1,8 @@
+body{
+    background-image: url('../images/backgroundcolor.jpg');
+}
+
+
 .word-count{
     background-color:transparent;
                 border:none;

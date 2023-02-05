@@ -82,7 +82,10 @@
       <div id="collapseOne{{"_".$message->id}}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPanelsStayOpenExample">
     <div class="accordion-body border-0 image-dropdown">
           <div class="card border-0 image-dropdown">
-                <a href="{{asset($message->image)}}" target="_blank"><img class="card-img-bottom" src="{{asset($message->image)}}" alt="message_img" style="width:100%"></a>
+                <a href="{{ asset('UPLOADS/MESSAGE_IMAGE/'. $message->image) }}" target="_blank">
+                  <img class="card-img-bottom" src="{{ asset('UPLOADS/MESSAGE_IMAGE/'. $message->image) }}"  alt="message_img" style="width:100%">
+                </a>
+                  {{-- <img class="card-img-bottom" src="{{asset($message->image)}}" alt="message_img" style="width:100%"> --}}
                   <div class="card-body">
                   </div>
               </div>
