@@ -31,12 +31,13 @@
     <link rel="stylesheet" href="{{url('vendor/css/create.css')}}">
 @endsection
 @section('content')
-<body
-style=" background-image: url('vendor/images/background-eye.gif');
+<body>
+<div class="body"style=" background-image: url('vendor/images/background-eye.gif');
     background-repeat:no-repeat;
     background-position: center;
     background-attachment:fixed;
 ">
+
 
  <div style="background-color: rgba(0,0,0, 0.8); border-radius:1%;" class="pt-5 pb-5 send-message">
 
@@ -122,6 +123,7 @@ style=" background-image: url('vendor/images/background-eye.gif');
 
     </div>
  </div>
+</div>
 
 </body>
 
