@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\CronController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CronController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FooterController;
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/mail',[FooterController::class, 'sendEmailToAllUsers']);
 // Route for the cron job to call
 Route::get('/delete-old-messages', [CronController::class, 'deleteOldMessages']);
 
